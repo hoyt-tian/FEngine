@@ -1,0 +1,18 @@
+.hpbar {
+    box-sizing: border-box;
+    background: transparent;
+    border-radius: 0 0 5em 0;
+    border: 1px solid;
+    
+    &.flip {
+        border-radius: 0 0 0 5em;
+    }
+    .innerValue{
+        border-radius: 0 0 5em 0;
+        float: right;
+        &.flip{
+            border-radius: 0 0 0 5em;
+            float: left;
+        }
+    }
+}

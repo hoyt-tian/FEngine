@@ -1,0 +1,78 @@
+
+
+.actionEditor{
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+
+    .tabs {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+        .ant-tabs-content {
+            flex: auto;
+
+            .ant-tabs-tabpane {
+                display: flex;
+            }
+        }
+    }
+
+    .preview{
+        display: flex;
+        align-items: baseline;
+        overflow-x: auto;
+        border-top: .01rem solid #eee;
+        .frame-card{
+            border: .01rem solid transparent;
+            margin-left: .16rem;
+
+            .ant-card-cover{
+                display: flex;
+                justify-content: center;
+                padding: .24rem;
+            }
+
+            .ant-card-body .ant-card-meta-title{
+                text-align: center;
+            }
+            &:hover{
+                border-color: #eee;
+                box-shadow: 0 .02rem .08rem rgba(0,0,0,.15);
+            }
+
+            &.selected {
+                box-shadow: 0 .02rem .08rem rgba(0,0,0,.15);
+                border-color: #108ee9;
+            }
+
+            img {
+                width: auto;
+                border-bottom: .01rem solid #eee;
+            }
+        }
+    }
+    .toolbar{
+        display: flex;
+        flex-wrap: wrap;
+
+        .toolbar-item {
+            margin-left: .16rem;
+            padding: .16rem 0;
+
+            label{
+                font-weight: bolder;
+            }
+        }
+    }
+
+    .canvas {
+        padding-top: .25rem;
+        .battle {
+            canvas {
+                box-shadow: 0 .02rem .08rem rgba(0,0,0,.15);
+            }
+        }
+    }
+}

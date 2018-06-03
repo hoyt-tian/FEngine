@@ -1,0 +1,2662 @@
+{
+  "name": "八神庙",
+  "actions": {
+    "stand": {
+      "base": "./assets/character/iori/stand",
+      "name": "stand",
+      "start": 0,
+      "total": 8,
+      "suffix": "png",
+      "loop": true,
+      "frames": [
+        {
+          "imgUrl": "./assets/character/iori/stand/0.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/stand/1.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/stand/2.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/stand/3.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/stand/4.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/stand/5.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/stand/6.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/stand/7.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        }
+      ],
+      "url": "http://oss.emugif.com/picture2014/kof97/iori/a01.gif",
+      "duration": 500,
+      "cancelable": true
+    },
+    "walk": {
+      "base": "./assets/character/iori/walk",
+      "name": "walk",
+      "start": 0,
+      "total": 9,
+      "suffix": "png",
+      "loop": true,
+      "frames": [
+        {
+          "imgUrl": "./assets/character/iori/walk/0.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/walk/1.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/walk/2.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/walk/3.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/walk/4.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/walk/5.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/walk/6.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/walk/7.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/walk/8.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        }
+      ],
+      "url": "http://oss.emugif.com/picture2014/kof97/iori/a02.gif",
+      "duration": 200,
+      "cancelable": true
+    },
+    "back": {
+      "base": "./assets/character/iori/back",
+      "name": "back",
+      "start": 0,
+      "total": 9,
+      "suffix": "png",
+      "loop": true,
+      "frames": [
+        {
+          "imgUrl": "./assets/character/iori/back/0.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/back/1.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/back/2.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/back/3.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/back/4.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/back/5.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/back/6.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/back/7.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/back/8.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        }
+      ],
+      "url": "http://oss.emugif.com/picture2014/kof97/iori/a03.gif",
+      "duration": 200
+    },
+    "run": {
+      "base": "./assets/character/iori/run",
+      "name": "run",
+      "start": 0,
+      "total": 16,
+      "suffix": "png",
+      "loop": true,
+      "frames": [
+        {
+          "imgUrl": "./assets/character/iori/run/0.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/run/1.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/run/2.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/run/3.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/run/4.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/run/5.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/run/6.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/run/7.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/run/8.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/run/9.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/run/10.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/run/11.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/run/12.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/run/13.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/run/14.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/run/15.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        }
+      ],
+      "url": "http://oss.emugif.com/picture2014/kof97/iori/a04.gif",
+      "duration": 200
+    },
+    "squat": {
+      "base": "./assets/character/iori/squat",
+      "name": "squat",
+      "start": 0,
+      "total": 14,
+      "suffix": "png",
+      "loop": true,
+      "frames": [
+        {
+          "imgUrl": "./assets/character/iori/squat/0.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/squat/1.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/squat/2.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/squat/3.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/squat/4.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/squat/5.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/squat/6.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/squat/7.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/squat/8.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/squat/9.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/squat/10.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/squat/11.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/squat/12.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/squat/13.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        }
+      ],
+      "url": "http://oss.emugif.com/picture2014/kof97/iori/a00.gif",
+      "duration": 200
+    },
+    "jump": {
+      "base": "./assets/character/iori/jump",
+      "name": "jump",
+      "start": 0,
+      "total": 13,
+      "suffix": "png",
+      "loop": false,
+      "frames": [
+        {
+          "imgUrl": "./assets/character/iori/jump/0.png",
+          "audioUrl": null,
+          "redrawCount": 3,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/jump/1.png",
+          "audioUrl": null,
+          "redrawCount": 3,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/jump/2.png",
+          "audioUrl": null,
+          "redrawCount": 3,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/jump/3.png",
+          "audioUrl": null,
+          "redrawCount": 3,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/jump/4.png",
+          "audioUrl": null,
+          "redrawCount": 3,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/jump/5.png",
+          "audioUrl": null,
+          "redrawCount": 3,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/jump/6.png",
+          "audioUrl": null,
+          "redrawCount": 3,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/jump/7.png",
+          "audioUrl": null,
+          "redrawCount": 3,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/jump/8.png",
+          "audioUrl": null,
+          "redrawCount": 3,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/jump/9.png",
+          "audioUrl": null,
+          "redrawCount": 3,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/jump/10.png",
+          "audioUrl": null,
+          "redrawCount": 3,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/jump/11.png",
+          "audioUrl": null,
+          "redrawCount": 3,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/jump/12.png",
+          "audioUrl": null,
+          "redrawCount": 3,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        }
+      ],
+      "url": "http://oss.emugif.com/picture2014/kof97/iori/a07.gif",
+      "duration": 500,
+      "cancelable": false
+    },
+    "slipback": {
+      "base": "./assets/character/iori/slipback",
+      "name": "slipback",
+      "start": 0,
+      "total": 16,
+      "suffix": "png",
+      "loop": false,
+      "frames": [
+        {
+          "imgUrl": "./assets/character/iori/slipback/0.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/slipback/1.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/slipback/2.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/slipback/3.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/slipback/4.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/slipback/5.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/slipback/6.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/slipback/7.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/slipback/8.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/slipback/9.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/slipback/10.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/slipback/11.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/slipback/12.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/slipback/13.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/slipback/14.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/slipback/15.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        }
+      ],
+      "url": "http://oss.emugif.com/picture2014/kof97/iori/a05.gif",
+      "duration": 200,
+      "cancelable": false
+    },
+    "lp": {
+      "base": "./assets/character/iori/lp",
+      "name": "light punch",
+      "start": 0,
+      "total": 4,
+      "suffix": "png",
+      "loop": false,
+      "frames": [
+        {
+          "imgUrl": "./assets/character/iori/lp/0.png",
+          "audioUrl": null,
+          "redrawCount": 3,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/lp/1.png",
+          "audioUrl": null,
+          "redrawCount": 3,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/lp/2.png",
+          "audioUrl": null,
+          "redrawCount": 3,
+          "counter": 0,
+          "attBlocks": [
+            {
+              "width": 27,
+              "height": 20,
+              "x": 68,
+              "y": -56
+            }
+          ],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/lp/3.png",
+          "audioUrl": null,
+          "redrawCount": 3,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        }
+      ],
+      "duration": 200,
+      "cancelable": false,
+      "createBlock": "if (this.current !== 1) return; let b = new Block(BlockType.attack, instance, frame.width/2, 20, instance.flip ? instance.x - frame.width * 1.5 : instance.x + frame.width, instance.y - 60); b.damage = 'hm'; b.source = instance.owner; return b"
+    },
+    "lk": {
+      "base": "./assets/character/iori/lk",
+      "name": "light kick",
+      "start": 0,
+      "total": 5,
+      "suffix": "png",
+      "loop": false,
+      "frames": [
+        {
+          "imgUrl": "./assets/character/iori/lk/0.png",
+          "audioUrl": null,
+          "redrawCount": 3,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/lk/1.png",
+          "audioUrl": null,
+          "redrawCount": 3,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/lk/2.png",
+          "audioUrl": null,
+          "redrawCount": 3,
+          "counter": 0,
+          "attBlocks": [{
+            "width": 41,
+            "height": 21,
+            "x": 49,
+            "y": -51
+          }],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/lk/3.png",
+          "audioUrl": null,
+          "redrawCount": 3,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/lk/4.png",
+          "audioUrl": null,
+          "redrawCount": 3,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        }
+      ],
+      "duration": 200,
+      "cancelable": false,
+      "createBlock": "if (this.current !== 1) return; let b = new Block(BlockType.attack, instance, frame.width - 20, 20, instance.flip ? instance.x - frame.width * 2 + 20 : instance.x + frame.width, instance.y - 40); b.damage = 'hm'; b.source = instance.owner; return b"
+    },
+    "hp": {
+      "base": "./assets/character/iori/hp",
+      "name": "heavy punch",
+      "start": 0,
+      "total": 8,
+      "suffix": "png",
+      "loop": false,
+      "frames": [
+        {
+          "imgUrl": "./assets/character/iori/hp/0.png",
+          "audioUrl": null,
+          "redrawCount": 3,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/hp/1.png",
+          "audioUrl": null,
+          "redrawCount": 3,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/hp/2.png",
+          "audioUrl": null,
+          "redrawCount": 3,
+          "counter": 0,
+          "attBlocks": [{
+            "width": 28,
+            "height": 18,
+            "x": 83,
+            "y": -45
+          }],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/hp/3.png",
+          "audioUrl": null,
+          "redrawCount": 3,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/hp/4.png",
+          "audioUrl": null,
+          "redrawCount": 3,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/hp/5.png",
+          "audioUrl": null,
+          "redrawCount": 3,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/hp/6.png",
+          "audioUrl": null,
+          "redrawCount": 3,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/hp/7.png",
+          "audioUrl": null,
+          "redrawCount": 3,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        }
+      ],
+      "duration": 400,
+      "cancelable": false,
+      "audio": {},
+      "createBlock": "if (this.current !== 2) return; let b = new Block(BlockType.attack, instance, 45, 35, instance.flip ? instance.x - frame.width  : instance.x + frame.width - 45, instance.y - 40); b.damage = 'hm'; b.source = instance.owner; return b"
+    },
+    "hk": {
+      "base": "./assets/character/iori/hk",
+      "name": "heavy kick",
+      "start": 0,
+      "total": 7,
+      "suffix": "png",
+      "loop": false,
+      "frames": [
+        {
+          "imgUrl": "./assets/character/iori/hk/0.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/hk/1.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/hk/2.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/hk/3.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/hk/4.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [{
+            "width": 51,
+            "height": 18,
+            "x": 54,
+            "y": -64
+          }],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/hk/5.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/hk/6.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        }
+      ],
+      "duration": 400,
+      "cancelable": false,
+      "createBlock": "if (this.current !== 2) return; let b = new Block(BlockType.attack, instance, 60, 20, instance.flip ? instance.x - frame.width*2 + 40 : instance.x + frame.width - 40, instance.y - 55); b.damage = 'hm'; b.source = instance.owner; return b"
+    },
+    "hm": {
+      "base": "./assets/character/iori/hm",
+      "name": "hurt medium",
+      "start": 0,
+      "total": 6,
+      "suffix": "png",
+      "loop": false,
+      "frames": [
+        {
+          "imgUrl": "./assets/character/iori/hm/0.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/hm/1.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/hm/2.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/hm/3.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/hm/4.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/hm/5.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        }
+      ],
+      "duration": 200,
+      "cancelable": false
+    }
+  },
+  "jump": 80,
+  "blink": 0,
+  "avatar": "avatar.gif",
+  "speed": 2,
+  "attack": 100,
+  "defense": 100,
+  "specialActions": {
+    "shoot": {
+      "base": "./assets/character/iori/shoot",
+      "name": "驱炎弹",
+      "start": 0,
+      "total": 20,
+      "suffix": "png",
+      "loop": false,
+      "frames": [
+        {
+          "imgUrl": "./assets/character/iori/shoot/0.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/shoot/1.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/shoot/2.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/shoot/3.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/shoot/4.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": [],
+          "execution": "console.log('shoot'); const {character, battle} = data; let bullet = character.getSprite('bullet'); bullet.y = character.y; bullet.x = character.x;battle.addToStage(bullet);"
+        },
+        {
+          "imgUrl": "./assets/character/iori/shoot/5.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/shoot/6.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/shoot/7.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/shoot/8.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/shoot/9.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/shoot/10.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/shoot/11.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/shoot/12.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/shoot/13.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/shoot/14.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/shoot/15.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/shoot/16.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/shoot/17.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/shoot/18.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/shoot/19.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        }
+      ],
+      "keys": "^sdzj$",
+      "url": "http://oss.emugif.com/picture2014/kof97/iori/c07.gif",
+      "duration": 500,
+      "cancelable": false
+    },
+    "kuihua": {
+      "base": "./assets/character/iori/kuihua",
+      "name": "葵花",
+      "start": 0,
+      "total": 31,
+      "suffix": "png",
+      "loop": false,
+      "frames": [
+        {
+          "imgUrl": "./assets/character/iori/kuihua/0.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": [],
+          "execution": "const {action} = data; action.total = 9;"
+        },
+        {
+          "imgUrl": "./assets/character/iori/kuihua/1.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": [],
+          "execution": "const {character} = data; character.move();"
+        },
+        {
+          "imgUrl": "./assets/character/iori/kuihua/2.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": [],
+          "execution": "const {character} = data; character.move();"
+        },
+        {
+          "imgUrl": "./assets/character/iori/kuihua/3.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": [],
+          "execution": "const {character} = data; character.move();"
+        },
+        {
+          "imgUrl": "./assets/character/iori/kuihua/4.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [{
+            "width": 29,
+            "height": 26,
+            "x": 60,
+            "y": -76
+          }],
+          "defBlocks": [],
+          "execution": "const {character} = data; character.move();"
+        },
+        {
+          "imgUrl": "./assets/character/iori/kuihua/5.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [{
+            "width": 20,
+            "height": 26,
+            "x": 55,
+            "y": -69
+          }],
+          "defBlocks": [],
+          "execution": "const {character} = data; character.move();"
+        },
+        {
+          "imgUrl": "./assets/character/iori/kuihua/6.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [{
+            "width": 20,
+            "height": 26,
+            "x": 55,
+            "y": -69
+          }],
+          "defBlocks": [],
+          "execution": "const {character} = data; character.move();"
+        },
+        {
+          "imgUrl": "./assets/character/iori/kuihua/7.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": [],
+          "execution": "const {character} = data; character.move();"
+        },
+        {
+          "imgUrl": "./assets/character/iori/kuihua/8.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": [],
+          "execution": "const {character, action, controller} = data; let motion = controller.getStr(); if(motion !== '') {motion = 'kuihua'} ; if (character.status === 'kuihua' && motion === 'kuihua'){ action.total = 13;}"
+        },
+        {
+          "imgUrl": "./assets/character/iori/kuihua/9.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": [],
+          "execution": "const {character} = data; character.move();"
+        },
+        {
+          "imgUrl": "./assets/character/iori/kuihua/10.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": [],
+          "execution": "const {character} = data; character.move();"
+        },
+        {
+          "imgUrl": "./assets/character/iori/kuihua/11.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [{
+            "width": 27,
+            "height": 31,
+            "x": 49,
+            "y": -92
+          }],
+          "defBlocks": [],
+          "execution": "const {character} = data; character.move();"
+        },
+        {
+          "imgUrl": "./assets/character/iori/kuihua/12.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [{
+            "width": 27,
+            "height": 31,
+            "x": 49,
+            "y": -92
+          }],
+          "defBlocks": [],
+          "execution": "const {character, action, controller} = data; let motion = controller.getStr(); if(motion !== '') {motion = 'kuihua'} ; if (character.status === 'kuihua' && motion === 'kuihua'){ action.total = 31;}"
+        },
+        {
+          "imgUrl": "./assets/character/iori/kuihua/13.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [{
+            "width": 27,
+            "height": 31,
+            "x": 49,
+            "y": -92
+          }],
+          "defBlocks": [],
+          "execution": "const {character} = data; character._y = character.y;"
+        },
+        {
+          "imgUrl": "./assets/character/iori/kuihua/14.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": [],
+          "execution": "const {character, action, frameIndex} = data; character.move(); character.y = character._y - Math.sin((frameIndex - 13)/14*Math.PI) * character.jump * 0.8;"
+        },
+        {
+          "imgUrl": "./assets/character/iori/kuihua/15.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": [],
+          "execution": "const {character, action, frameIndex} = data; character.move(); character.y = character._y - Math.sin((frameIndex - 13)/14*Math.PI) * character.jump * 0.8;"
+        },
+        {
+          "imgUrl": "./assets/character/iori/kuihua/16.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": [],
+          "execution": "const {character, action, frameIndex} = data; character.move(); character.y = character._y - Math.sin((frameIndex - 13)/14*Math.PI) * character.jump * 0.8;"
+        },
+        {
+          "imgUrl": "./assets/character/iori/kuihua/17.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": [],
+          "execution": "const {character, action, frameIndex} = data; character.move(); character.y = character._y - Math.sin((frameIndex - 13)/14*Math.PI) * character.jump * 0.8;"
+        },
+        {
+          "imgUrl": "./assets/character/iori/kuihua/18.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": [],
+          "execution": "const {character, action, frameIndex} = data; character.move(); character.y = character._y - Math.sin((frameIndex - 13)/14*Math.PI) * character.jump * 0.8;"
+        },
+        {
+          "imgUrl": "./assets/character/iori/kuihua/19.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": [],
+          "execution": "const {character, action, frameIndex} = data;character.move(); character.y = character._y - Math.sin((frameIndex - 13)/14*Math.PI) * character.jump * 0.8;"
+        },
+        {
+          "imgUrl": "./assets/character/iori/kuihua/20.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": [],
+          "execution": "const {character, action, frameIndex} = data; character.move(); character.y = character._y - Math.sin((frameIndex - 13)/14*Math.PI) * character.jump * 0.8;"
+        },
+        {
+          "imgUrl": "./assets/character/iori/kuihua/21.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [{
+            "width": 31,
+            "height": 67,
+            "x": 39,
+            "y": 0
+          }],
+          "defBlocks": [],
+          "execution": "const {character, action, frameIndex} = data; character.move(); character.y = character._y - Math.sin((frameIndex - 13)/14*Math.PI) * character.jump * 0.8;"
+        },
+        {
+          "imgUrl": "./assets/character/iori/kuihua/22.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [{
+            "width": 31,
+            "height": 67,
+            "x": 39,
+            "y": 0
+          }],
+          "defBlocks": [],
+          "execution": "const {character, action, frameIndex} = data; character.move(); character.y = character._y - Math.sin((frameIndex - 13)/14*Math.PI) * character.jump * 0.8;"
+        },
+        {
+          "imgUrl": "./assets/character/iori/kuihua/23.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [{
+            "width": 31,
+            "height": 67,
+            "x": 39,
+            "y": 0
+          }],
+          "defBlocks": [],
+          "execution": "const {character, action, frameIndex} = data; character.move(); character.y = character._y - Math.sin((frameIndex - 13)/14*Math.PI) * character.jump * 0.8;"
+        },
+        {
+          "imgUrl": "./assets/character/iori/kuihua/24.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [{
+            "width": 31,
+            "height": 67,
+            "x": 39,
+            "y": 0
+          }],
+          "defBlocks": [],
+          "execution": "const {character, action, frameIndex} = data; character.move(); character.y = character._y - Math.sin((frameIndex - 13)/14*Math.PI) * character.jump * 0.8;"
+        },
+        {
+          "imgUrl": "./assets/character/iori/kuihua/25.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": [],
+          "execution": "const {character, action, frameIndex} = data; character.move(); character.y = character._y - Math.sin((frameIndex - 13)/14*Math.PI) * character.jump * 0.8;"
+        },
+        {
+          "imgUrl": "./assets/character/iori/kuihua/26.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": [],
+          "execution": "const {character, action, frameIndex} = data;character.move();character.y = character._y - Math.sin((frameIndex - 13)/14*Math.PI) * character.jump * 0.8;"
+        },
+        {
+          "imgUrl": "./assets/character/iori/kuihua/27.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": [],
+          "execution": "const {character} = data; character.y = character._y;"
+        },
+        {
+          "imgUrl": "./assets/character/iori/kuihua/28.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/kuihua/29.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/kuihua/30.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        }
+      ],
+      "keys": "^sazj$",
+      "duration": 500,
+      "cancelable": false
+    },
+    "bzv": {
+      "base": "./assets/character/iori/bzv",
+      "name": "八稚女",
+      "start": 0,
+      "total": 100,
+      "suffix": "png",
+      "loop": false,
+      "frames": [
+        {
+          "imgUrl": "./assets/character/iori/bzv/0.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": [],
+          "execution": "console.log('触发必杀技'); const {action, battle} = data; battle.setBg('#333');action.total = 21;"
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/1.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/2.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/3.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/4.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/5.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/6.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/7.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/8.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/9.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/10.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/11.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": [],
+          "execution": "const {character, battle} = data; battle.clearBg();"
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/12.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/13.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [{
+            "width": 31,
+            "height": 64,
+            "x":72,
+            "y":0,
+            "offset": {"xf": 0},
+            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; enemy.x = att.x + att.width;"
+          }],
+          "defBlocks": [],
+          "execution": "const {character} = data; character.move(character.speed<<4); "
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/14.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "offset": {"xf": 0},
+          "attBlocks": [{
+            "width": 31,
+            "height": 64,
+            "x":72,
+            "y":0,
+            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; enemy.x = att.x + att.width;"
+          }],
+          "defBlocks": [],
+          "execution": "const {character} = data; character.move(character.speed<<4); "
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/15.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [{
+            "width": 31,
+            "height": 64,
+            "x":72,
+            "y":0,
+            "offset": {"xf": 0},
+            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; enemy.x = att.x + att.width;"
+          }],
+          "defBlocks": [],
+          "execution": "const {character} = data; character.move(character.speed<<4); "
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/16.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [{
+            "width": 31,
+            "height": 64,
+            "x":72,
+            "y":0,
+            "offset": {"xf": 0},
+            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; enemy.x = att.x + att.width;"
+          }],
+          "defBlocks": [],
+          "execution": "const {character} = data; character.move(character.speed<<4); "
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/17.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [{
+            "width": 31,
+            "height": 64,
+            "x":72,
+            "y":0,
+            "offset": {"xf": 0},
+            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; enemy.x = att.x + att.width;"
+          }],
+          "defBlocks": [],
+          "execution": "const {character} = data; character.move(character.speed<<4); "
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/18.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [{
+            "width": 31,
+            "height": 64,
+            "x":72,
+            "y":0,
+            "offset": {"xf": 0},
+            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; enemy.x = att.x + att.width;"
+          }],
+          "defBlocks": [],
+          "execution": "const {character} = data; character.move(character.speed<<4); "
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/19.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [{
+            "width": 31,
+            "height": 64,
+            "x":72,
+            "y":0,
+            "offset": {"xf": 0},
+            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; enemy.x = att.x + att.width;"
+          }],
+          "defBlocks": [],
+          "execution": "const {character} = data; character.move(character.speed<<4); "
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/20.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [{
+            "width": 31,
+            "height": 64,
+            "x":72,
+            "y":0,
+            "offset": {"xf": 0},
+            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; enemy.x = att.x + att.width;"
+          }],
+          "defBlocks": [],
+          "execution": "const {character} = data; character.move(character.speed<<4); "
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/21.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [{
+            "width": 31,
+            "height": 64,
+            "x":72,
+            "y":0,
+            "offset": {"xf": 0},
+            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; enemy.x = att.x + att.width;"
+          }],
+          "defBlocks": [],
+          "execution": "const {character} = data; character.move(character.speed<<4); "
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/22.png",
+          "audioUrl": "./assets/character/iori/bzv/word.mp3",
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/23.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/24.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/25.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/26.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/27.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/28.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/29.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/30.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/31.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/32.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/33.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/34.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/35.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/36.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [{
+            "width": 32,
+            "height": 130,
+            "x": 65,
+            "y": 0,
+            "blink": 0,
+            "offset": {
+              "xf": 0
+            }
+          }],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/37.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/38.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/39.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/40.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/41.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/42.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/43.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [{
+            "width": 32,
+            "height": 130,
+            "x": 65,
+            "y": 0,
+            "blink": 0,
+            "offset": {
+              "xf": 0
+            }
+          }],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/44.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/45.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/46.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/47.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/48.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/49.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/50.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [{
+            "width": 32,
+            "height": 130,
+            "x": 65,
+            "y": 0,
+            "blink": 0,
+            "offset": {
+              "xf": 0
+            }
+          }],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/51.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/52.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/53.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/54.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/55.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [{
+            "width": 32,
+            "height": 130,
+            "x": 65,
+            "y": 0,
+            "blink": 0,
+            "offset": {
+              "xf": 0
+            }
+          }],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/56.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/57.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/58.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/59.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/60.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/61.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/62.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [{
+            "width": 32,
+            "height": 130,
+            "x": 65,
+            "y": 0,
+            "blink": 0,
+            "offset": {
+              "xf": 0
+            }
+          }],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/63.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/64.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/65.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/66.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/67.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/68.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/69.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/70.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/71.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/72.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/73.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/74.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/75.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/76.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/77.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/78.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/79.png",
+          "audioUrl": null,
+          "redrawCount": 30,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/80.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/81.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/82.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/83.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [{
+            "width": 32,
+            "height": 130,
+            "x": 65,
+            "y": 0,
+            "blink": 0,
+            "offset": {
+              "xf": 0
+            }
+          }],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/84.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/85.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/86.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/87.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/88.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/89.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/90.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/91.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/92.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/93.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/94.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/95.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/96.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/97.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/98.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/bzv/99.png",
+          "audioUrl": null,
+          "redrawCount": 1,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        }
+      ],
+      "keys": "^szj$",
+      "duration": 1000,
+      "cancelable": false,
+      "createBlock": "if (this.current < 11) return; let b = new Block(BlockType.attack, instance, frame.width - 20, 20, instance.flip ? instance.x - frame.width * 2 + 20 : instance.x + frame.width, instance.y - 40); b.damage = 'hm'; b.source = instance.owner; b.execute = (att, def) => { console.log('execute block'); att.source.character.currentAction.total = 100}; return b"
+    }
+  },
+  "sprites": {
+    "bullet": {
+      "base": "./assets/character/iori//bullet/",
+      "name": "bullet",
+      "flip": false,
+      "x": 0,
+      "y": 0,
+      "speed": 10,
+      "total": 9,
+      "duration": 400,
+      "loop": true,
+      "createBlock": "let b = new Block(BlockType.attack, instance, frame.width, frame.height, instance.flip ? instance.x - frame.width : instance.x, instance.y); b.source = instance.owner; return b",
+      "action": {
+        "base": "./assets/character/iori//bullet/",
+        "name": "bullet",
+        "start": 0,
+        "total": 9,
+        "suffix": "png",
+        "loop": true,
+        "frames": [
+          {
+            "imgUrl": "./assets/character/iori//bullet//0.png",
+            "audioUrl": null,
+            "redrawCount": 3,
+            "counter": 0,
+            "attBlocks": ["const {frame, instance} = data; block.width = frame.image.width; block.height = frame.image.height; block.x = instance.flip ? instance.x - frame.image.width : instance.x; block.y = instance.y; block.source = instance.owner; block.execute = () => instance.x = 10000 "],
+            "defBlocks": []
+          },
+          {
+            "imgUrl": "./assets/character/iori//bullet//1.png",
+            "audioUrl": null,
+            "redrawCount": 3,
+            "counter": 0,
+            "attBlocks": ["const {frame, instance} = data; block.width = frame.image.width; block.height = frame.image.height; block.x = instance.flip ? instance.x - frame.image.width : instance.x; block.y = instance.y; block.source = instance.owner; block.execute = () => instance.x = 10000 "],
+            "defBlocks": []
+          },
+          {
+            "imgUrl": "./assets/character/iori//bullet//2.png",
+            "audioUrl": null,
+            "redrawCount": 3,
+            "counter": 0,
+            "attBlocks": ["const {frame, instance} = data; block.width = frame.image.width; block.height = frame.image.height; block.x = instance.flip ? instance.x - frame.image.width : instance.x; block.y = instance.y; block.source = instance.owner; block.execute = () => instance.x = 10000 "],
+            "defBlocks": []
+          },
+          {
+            "imgUrl": "./assets/character/iori//bullet//3.png",
+            "audioUrl": null,
+            "redrawCount": 3,
+            "counter": 0,
+            "attBlocks": ["const {frame, instance} = data; block.width = frame.image.width; block.height = frame.image.height; block.x = instance.flip ? instance.x - frame.image.width : instance.x; block.y = instance.y; block.source = instance.owner; block.execute = () => instance.x = 10000 "],
+            "defBlocks": []
+          },
+          {
+            "imgUrl": "./assets/character/iori//bullet//4.png",
+            "audioUrl": null,
+            "redrawCount": 3,
+            "counter": 0,
+            "attBlocks": ["const {frame, instance} = data; block.width = frame.image.width; block.height = frame.image.height; block.x = instance.flip ? instance.x - frame.image.width : instance.x; block.y = instance.y; block.source = instance.owner; block.execute = () => instance.x = 10000 "],
+            "defBlocks": []
+          },
+          {
+            "imgUrl": "./assets/character/iori//bullet//5.png",
+            "audioUrl": null,
+            "redrawCount": 3,
+            "counter": 0,
+            "attBlocks": ["const {frame, instance} = data; block.width = frame.image.width; block.height = frame.image.height; block.x = instance.flip ? instance.x - frame.image.width : instance.x; block.y = instance.y; block.source = instance.owner; block.execute = () => instance.x = 10000 "],
+            "defBlocks": []
+          },
+          {
+            "imgUrl": "./assets/character/iori//bullet//6.png",
+            "audioUrl": null,
+            "redrawCount": 3,
+            "counter": 0,
+            "attBlocks": ["const {frame, instance} = data; block.width = frame.image.width; block.height = frame.image.height; block.x = instance.flip ? instance.x - frame.image.width : instance.x; block.y = instance.y; block.source = instance.owner; block.execute = () => instance.x = 10000 "],
+            "defBlocks": []
+          },
+          {
+            "imgUrl": "./assets/character/iori//bullet//7.png",
+            "audioUrl": null,
+            "redrawCount": 3,
+            "counter": 0,
+            "attBlocks": ["const {frame, instance} = data; block.width = frame.image.width; block.height = frame.image.height; block.x = instance.flip ? instance.x - frame.image.width : instance.x; block.y = instance.y; block.source = instance.owner; block.execute = () => instance.x = 10000 "],
+            "defBlocks": []
+          },
+          {
+            "imgUrl": "./assets/character/iori//bullet//8.png",
+            "audioUrl": null,
+            "redrawCount": 3,
+            "counter": 0,
+            "attBlocks": ["const {frame, instance} = data; block.width = frame.image.width; block.height = frame.image.height; block.x = instance.flip ? instance.x - frame.image.width : instance.x; block.y = instance.y; block.source = instance.owner; block.execute = () => instance.x = 10000 "],
+            "defBlocks": []
+          }
+        ],
+        "speed": 10,
+        "duration": 400
+      }
+    }
+  }
+}

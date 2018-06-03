@@ -1,0 +1,1 @@
+find $1 -type f | sed "p;s/frame_\([0-9]*\)_.*\.png/\1\.png/g" | xargs -n2 mv

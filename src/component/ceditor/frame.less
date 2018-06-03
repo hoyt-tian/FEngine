@@ -1,0 +1,53 @@
+.frame-editor {
+    display: flex;
+    padding: .16rem;
+    align-items: flex-start;
+    flex: auto;
+
+    .frame-content {
+        display: flex;
+    }
+    .frame-canvas{
+        box-shadow: 0 .02rem .08rem rgba(0,0,0,.15);
+    }
+
+    .frame-overlay {
+        position: absolute;
+        width: 4rem;
+        height: 3rem;
+        box-shadow: 0 .02rem .08rem rgba(0,0,0,.15);
+
+        .block {
+            background: #FFF;
+            mix-blend-mode: overlay;
+            position: absolute;
+        }
+    }
+
+    .frame-rightbox{
+        margin-left: .16rem;
+        flex: 1;
+        min-height: 3rem;
+        max-height: 5rem;
+        overflow: auto;
+        .block-counter {
+            border-radius: .1rem;
+            color: #FFF;
+            display: inline-block;
+            font-weight: bolder;
+            padding: .03rem 0.06rem;
+            margin: 0 0.1rem;
+        }
+
+        .ant-list-item{
+            box-shadow: 0 0.02rem 0.08rem rgba(0,0,0,.15);
+            margin-top: .4rem;
+        }
+
+        footer{
+            margin-top: .3rem;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

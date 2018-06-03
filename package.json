@@ -1,0 +1,56 @@
+{
+  "name": "refgt",
+  "version": "1.0.0",
+  "description": "react FighT Game engine",
+  "main": "index.js",
+  "entry": {
+    "editor": "./src/entry/editor/index.js",
+    "practice": "./src/entry/practice/index.js"
+  },
+  "scripts": {
+    "start": "tnpm run dev",
+    "dev": "webpack-dev-server --hot --inline --content-base  ./dist",
+    "rename": "find . -type f | sed -n \"p;s/frame_\\([0-9]*\\)_.*\\.png/\\1\\.png/g\" | xargs -n2 mv"
+  },
+  "author": "Tian Hao",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-import": "^1.7.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.16",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.28.11",
+    "file-loader": "^0.11.1",
+    "html-webpack-plugin": "^2.28.0",
+    "icons-loader": "^0.0.6",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "node-sass": "^4.5.3",
+    "react": "^15.5.4",
+    "react-ace": "^6.1.1",
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.7",
+    "redux": "^3.7.2",
+    "sass-loader": "^6.0.6",
+    "source-map-support": "^0.4.15",
+    "style-inject": "^0.1.2",
+    "style-loader": "^0.18.2",
+    "svg-url-loader": "^2.1.1",
+    "url-loader": "^0.5.8",
+    "webpack": "^2.6.1",
+    "webpack-clean-obsolete-chunks": "^0.1.9",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "dependencies": {
+    "antd": "^3.5.0"
+  }
+}
