@@ -101,9 +101,10 @@ class Character {
     }
 
     next(data, loop = false) {
+        let prev = this.currentAction
         let ret = this.currentAction.next({...data, character: this, player: this.owner, controller: this.owner.controller}, loop)
         if (ret === -1) {
-            this.setStatus('stand')
+            this.setStatus(prev.nextStatus || 'stand')
         }
     }
 
@@ -260,21 +261,24 @@ class Character {
             case 'drop':
                 switch(this.currentAction.current) {
                     case 0:
-                        this.move(-this.speed * 4, -this.jump/10);
-                        break;
+                        this.move(-this.speed * 4, -this.jump/10)
+                        break
                     case 1:
                         if (this.y < battle.height) { 
-                            this.move(-this.speed * 4, this.jump/10); 
-                            this.currentAction.current = 1;
+                            this.move(-this.speed * 4, this.jump/10)
+                            this.currentAction.current = 1
                         } else { 
-                            this.y = battle.height;
+                            this.y = battle.height
                         }
-                        break;
+                        break
                     default:
                         this.move(-this.speed)
-                        break;
+                        break
 
                 }
+                break
+            case 'getup':
+                this.y = battle.height
                 break
             default:
                 /*
@@ -293,7 +297,7 @@ class Character {
 
     toJSON() {
         const {status, owner, _config, index, x, y, flip, base, ...rest} = this
-        const baseActions = ['stand', 'walk', 'back', 'run', 'squat', 'jump', 'slipback', 'lp', 'lk', 'hp', 'hk', 'hm']
+        const baseActions = ['stand', 'walk', 'back', 'run', 'squat', 'jump', 'slipback', 'lp', 'lk', 'hp', 'hk', 'hm', 'drop', 'getup']
         const baseAction = {}
         baseActions.forEach(k => baseAction[k] = this.actions[k])
         rest.actions = baseAction

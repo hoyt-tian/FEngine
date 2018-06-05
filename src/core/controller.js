@@ -149,6 +149,7 @@ class Controller {
       // console.log('stand up')
       this.character.setStatus('stand')
     }
+    
     this.character.doAction(this, battle, originStatus)
     // this.timer = setTimeout(this.clearBuffer, InputClearInterval)
   }

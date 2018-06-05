@@ -1154,6 +1154,82 @@
       ],
       "duration": 400,
       "cancelable": false
+    },
+    "getup": {
+      "base": "./assets/character/iori/getup",
+      "name": "drop",
+      "start": 0,
+      "total": 8,
+      "suffix": "png",
+      "loop": false,
+      "frames": [
+        {
+          "imgUrl": "./assets/character/iori/getup/0.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/getup/1.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/getup/2.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/getup/3.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/getup/4.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/getup/5.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/getup/6.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/getup/7.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        }
+      ],
+      "duration": 800,
+      "cancelable": false
     }
   },
   "jump": 80,
