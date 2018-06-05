@@ -1033,8 +1033,7 @@
         }
       ],
       "duration": 400,
-      "cancelable": false,
-      "createBlock": "if (this.current !== 2) return; let b = new Block(BlockType.attack, instance, 60, 20, instance.flip ? instance.x - frame.width*2 + 40 : instance.x + frame.width - 40, instance.y - 55); b.damage = 'hm'; b.source = instance.owner; return b"
+      "cancelable": false
     },
     "hm": {
       "base": "./assets/character/iori/hm",
@@ -1094,6 +1093,66 @@
         }
       ],
       "duration": 200,
+      "cancelable": false
+    },
+    "drop": {
+      "base": "./assets/character/iori/drop",
+      "name": "drop",
+      "start": 0,
+      "total": 6,
+      "suffix": "png",
+      "loop": false,
+      "frames": [
+        {
+          "imgUrl": "./assets/character/iori/drop/0.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/drop/1.png",
+          "audioUrl": null,
+          "redrawCount": 2,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/drop/2.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/drop/3.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/drop/4.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/drop/5.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        }
+      ],
+      "duration": 400,
       "cancelable": false
     }
   },
@@ -1743,7 +1802,7 @@
             "x":72,
             "y":0,
             "offset": {"xf": 0},
-            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; if(att.source.flip){ const box = enemy.x = att.x - att.width; } else { enemy.x = att.x + att.width;  } "
+            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; const box = enemy.box(); if (att.source.flip) { att.source.x = box.x + box.width + att.source.currentFrame.image.width } else {att.source.x = box.x - att.source.currentFrame.image.width} "
           }],
           "defBlocks": [],
           "execution": "const {character} = data; character.move(character.speed<<4); "
@@ -1759,7 +1818,7 @@
             "height": 64,
             "x":72,
             "y":0,
-            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; if(att.source.flip){ const box = enemy.x = att.x - att.width; } else { enemy.x = att.x + att.width;  }"
+            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; const box = enemy.box(); if (att.source.flip) { att.source.x = box.x + box.width + att.source.currentFrame.image.width } else {att.source.x = box.x - att.source.currentFrame.image.width}"
           }],
           "defBlocks": [],
           "execution": "const {character} = data; character.move(character.speed<<4); "
@@ -1775,7 +1834,7 @@
             "x":72,
             "y":0,
             "offset": {"xf": 0},
-            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; if(att.source.flip){ const box = enemy.x = att.x - att.width; } else { enemy.x = att.x + att.width;  }"
+            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; const box = enemy.box(); if (att.source.flip) { att.source.x = box.x + box.width + att.source.currentFrame.image.width } else {att.source.x = box.x - att.source.currentFrame.image.width}"
           }],
           "defBlocks": [],
           "execution": "const {character} = data; character.move(character.speed<<4); "
@@ -1791,7 +1850,7 @@
             "x":72,
             "y":0,
             "offset": {"xf": 0},
-            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; if(att.source.flip){ const box = enemy.x = att.x - att.width; } else { enemy.x = att.x + att.width;  }"
+            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; const box = enemy.box(); if (att.source.flip) { att.source.x = box.x + box.width + att.source.currentFrame.image.width } else {att.source.x = box.x - att.source.currentFrame.image.width}"
           }],
           "defBlocks": [],
           "execution": "const {character} = data; character.move(character.speed<<4); "
@@ -1807,7 +1866,7 @@
             "x":72,
             "y":0,
             "offset": {"xf": 0},
-            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner;if(att.source.flip){ const box = enemy.x = att.x - att.width; } else { enemy.x = att.x + att.width;  }"
+            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner;const box = enemy.box(); if (att.source.flip) { att.source.x = box.x + box.width + att.source.currentFrame.image.width } else {att.source.x = box.x - att.source.currentFrame.image.width}"
           }],
           "defBlocks": [],
           "execution": "const {character} = data; character.move(character.speed<<4); "
@@ -1823,7 +1882,7 @@
             "x":72,
             "y":0,
             "offset": {"xf": 0},
-            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; if(att.source.flip){ const box = enemy.x = att.x - att.width; } else { enemy.x = att.x + att.width;  }"
+            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; const box = enemy.box(); if (att.source.flip) { att.source.x = box.x + box.width + att.source.currentFrame.image.width } else {att.source.x = box.x - att.source.currentFrame.image.width}"
           }],
           "defBlocks": [],
           "execution": "const {character} = data; character.move(character.speed<<4); "
@@ -1839,7 +1898,7 @@
             "x":72,
             "y":0,
             "offset": {"xf": 0},
-            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; if(att.source.flip){ const box = enemy.x = att.x - att.width; } else { enemy.x = att.x + att.width;  }"
+            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; const box = enemy.box(); if (att.source.flip) { att.source.x = box.x + box.width + att.source.currentFrame.image.width } else {att.source.x = box.x - att.source.currentFrame.image.width}"
           }],
           "defBlocks": [],
           "execution": "const {character} = data; character.move(character.speed<<4); "
@@ -1855,7 +1914,7 @@
             "x":72,
             "y":0,
             "offset": {"xf": 0},
-            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; if(att.source.flip){ const box = enemy.x = att.x - att.width; } else { enemy.x = att.x + att.width;  }"
+            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; const box = enemy.box(); if (att.source.flip) { att.source.x = box.x + box.width + att.source.currentFrame.image.width } else {att.source.x = box.x - att.source.currentFrame.image.width}"
           }],
           "defBlocks": [],
           "execution": "const {character} = data; character.move(character.speed<<4); "
@@ -1871,7 +1930,7 @@
             "x":72,
             "y":0,
             "offset": {"xf": 0},
-            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; if(att.source.flip){ const box = enemy.x = att.x - att.width; } else { enemy.x = att.x + att.width;  }"
+            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; const box = enemy.box(); if (att.source.flip) { att.source.x = box.x + box.width + att.source.currentFrame.image.width } else {att.source.x = box.x - att.source.currentFrame.image.width}"
           }],
           "defBlocks": [],
           "execution": "const {character} = data; character.move(character.speed<<4); "
@@ -2422,7 +2481,8 @@
             "blink": 0,
             "offset": {
               "xf": 0
-            }
+            },
+            "damage": "drop"
           }],
           "defBlocks": []
         },

@@ -257,6 +257,25 @@ class Character {
                     this.move(this.speed * -2)
                 }*/
                 break
+            case 'drop':
+                switch(this.currentAction.current) {
+                    case 0:
+                        this.move(-this.speed * 4, -this.jump/10);
+                        break;
+                    case 1:
+                        if (this.y < battle.height) { 
+                            this.move(-this.speed * 4, this.jump/10); 
+                            this.currentAction.current = 1;
+                        } else { 
+                            this.y = battle.height;
+                        }
+                        break;
+                    default:
+                        this.move(-this.speed)
+                        break;
+
+                }
+                break
             default:
                 /*
                 if( this.specialActions && this.specialActions[this.status]) {
@@ -269,7 +288,7 @@ class Character {
     
     move(ox = this.speed, oy = 0) {
         this.x += ox * (this.flip ? -1 : 1)
-        this.y += oy * (this.flip ? -1 : 1)
+        this.y += oy
     }
 
     toJSON() {
