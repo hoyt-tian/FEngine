@@ -107,6 +107,28 @@ class Character {
         }
     }
 
+    box() {
+        const ret = {
+            x: this.x,
+            y: this.y,
+            width: this.currentFrame.image.width,
+            height: this.currentFrame.image.height,
+        }
+        if (this.flip) ret.x = ret.x - ret.width
+        return ret
+    }
+
+    setFlip(flip) {
+        this.flip = flip
+        if (flip) {
+            this.x = this.x + this.currentFrame.image.width
+        } else {
+            this.x = this.x - this.currentFrame.image.width
+        }
+        this.setStatus('stand')
+    }
+
+
     static fetchAll() {
         return fetch('./assets/character/index.json')
         .then(response => response.json() )
@@ -156,13 +178,14 @@ class Character {
     currentBlock(data) {
         let blocks = []
         const frame = this.currentFrame
+        const box = this.box()
         let target = new Block({
             type: BlockType.target, 
             owner: this, 
-            width: frame.image.width, 
-            height: frame.image.height, 
-            x: this.flip ? this.x - frame.image.width : this.x, 
-            y: this.y})
+            width: box.width, 
+            height: box.height, 
+            x: box.x,
+            y: box.y})
         blocks.push(target)
         try{
             let ablock = this.currentAction.currentBlock({...data, instance: this, owner: this.owner})
@@ -174,6 +197,7 @@ class Character {
         }catch(e) {
             console.log('character current Block error')
         }
+        blocks.forEach(b => b.flip = this.flip)
         return blocks
     }
 

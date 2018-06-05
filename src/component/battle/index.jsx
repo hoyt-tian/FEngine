@@ -33,7 +33,7 @@ class Battle extends Component {
             this.state.p2hp = this.state.p2hpMax = this.p2.hp
             this.place(this.p2.character)
             this.p2.character.x = this.width / 2
-            this.p2.character.flip = true
+            this.p2.setFlip(true)
         }
         
 
@@ -117,16 +117,17 @@ class Battle extends Component {
         })
 
         if(this.state.showBlock) {
-            this.ctx.save()
             Object.values(BlockType).forEach(t => {
                 blocks[t].forEach(b => {
                     if (b.alive) {
+                        this.ctx.save()
+                        this.ctx.scale(b.flip ? -1 : 1, 1)
                         this.ctx.strokeStyle = Block.blockColor(b.type)
-                        this.ctx.strokeRect(b.x, b.y - b.height, b.width, b.height)
+                        this.ctx.strokeRect(b.flip ? -b.x-b.width : b.x, b.y - b.height, b.width, b.height)
+                        this.ctx.restore()
                     }
                 })
             })
-            this.ctx.restore()
         }
 
         // clear useless block
@@ -140,6 +141,7 @@ class Battle extends Component {
             this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height)
             this.ctx.restore()
         }
+        this.updateFlip(this.p1, this.p2)
         this.p1.controller.work(this)
         this.p2 && this.p2.controller.work(this)
         this.setState({
@@ -160,6 +162,31 @@ class Battle extends Component {
         })        
         this.items = this.items.filter(item => item.x < this.width)
         this.timer = requestAnimationFrame(this.redraw) 
+    }
+
+    updateFlip = (p1, p2) => {
+       
+        if (p1 && p2 ) {
+            const c1 = p1.character
+            const c2 = p2.character
+
+            const b1 = p1.character.box()
+            const b2 = p2.character.box()
+
+            if (p1.character.flip === false) {
+                if (b1.x > b2.x) {
+                    p1.setFlip(true)
+                    p2.setFlip(false)
+                }
+            } else {
+                if (b2.x > b1.x + b1.width) {
+                    p1.setFlip(false)
+                    p2.setFlip(true)
+                }
+            }
+            
+            // p1.controller.setFlip(flip, p2.controller)
+        }        
     }
 
 

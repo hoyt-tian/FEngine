@@ -999,7 +999,12 @@
           "audioUrl": null,
           "redrawCount": 4,
           "counter": 0,
-          "attBlocks": [],
+          "attBlocks": [{
+            "width": 51,
+            "height": 18,
+            "x": 54,
+            "y": -64
+          }],
           "defBlocks": []
         },
         {
@@ -1007,12 +1012,7 @@
           "audioUrl": null,
           "redrawCount": 4,
           "counter": 0,
-          "attBlocks": [{
-            "width": 51,
-            "height": 18,
-            "x": 54,
-            "y": -64
-          }],
+          "attBlocks": [],
           "defBlocks": []
         },
         {
@@ -1743,7 +1743,7 @@
             "x":72,
             "y":0,
             "offset": {"xf": 0},
-            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; enemy.x = att.x + att.width;"
+            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; if(att.source.flip){ const box = enemy.x = att.x - att.width; } else { enemy.x = att.x + att.width;  } "
           }],
           "defBlocks": [],
           "execution": "const {character} = data; character.move(character.speed<<4); "
@@ -1759,7 +1759,7 @@
             "height": 64,
             "x":72,
             "y":0,
-            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; enemy.x = att.x + att.width;"
+            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; if(att.source.flip){ const box = enemy.x = att.x - att.width; } else { enemy.x = att.x + att.width;  }"
           }],
           "defBlocks": [],
           "execution": "const {character} = data; character.move(character.speed<<4); "
@@ -1775,7 +1775,7 @@
             "x":72,
             "y":0,
             "offset": {"xf": 0},
-            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; enemy.x = att.x + att.width;"
+            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; if(att.source.flip){ const box = enemy.x = att.x - att.width; } else { enemy.x = att.x + att.width;  }"
           }],
           "defBlocks": [],
           "execution": "const {character} = data; character.move(character.speed<<4); "
@@ -1791,7 +1791,7 @@
             "x":72,
             "y":0,
             "offset": {"xf": 0},
-            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; enemy.x = att.x + att.width;"
+            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; if(att.source.flip){ const box = enemy.x = att.x - att.width; } else { enemy.x = att.x + att.width;  }"
           }],
           "defBlocks": [],
           "execution": "const {character} = data; character.move(character.speed<<4); "
@@ -1807,7 +1807,7 @@
             "x":72,
             "y":0,
             "offset": {"xf": 0},
-            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; enemy.x = att.x + att.width;"
+            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner;if(att.source.flip){ const box = enemy.x = att.x - att.width; } else { enemy.x = att.x + att.width;  }"
           }],
           "defBlocks": [],
           "execution": "const {character} = data; character.move(character.speed<<4); "
@@ -1823,7 +1823,7 @@
             "x":72,
             "y":0,
             "offset": {"xf": 0},
-            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; enemy.x = att.x + att.width;"
+            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; if(att.source.flip){ const box = enemy.x = att.x - att.width; } else { enemy.x = att.x + att.width;  }"
           }],
           "defBlocks": [],
           "execution": "const {character} = data; character.move(character.speed<<4); "
@@ -1839,7 +1839,7 @@
             "x":72,
             "y":0,
             "offset": {"xf": 0},
-            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; enemy.x = att.x + att.width;"
+            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; if(att.source.flip){ const box = enemy.x = att.x - att.width; } else { enemy.x = att.x + att.width;  }"
           }],
           "defBlocks": [],
           "execution": "const {character} = data; character.move(character.speed<<4); "
@@ -1855,7 +1855,7 @@
             "x":72,
             "y":0,
             "offset": {"xf": 0},
-            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; enemy.x = att.x + att.width;"
+            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; if(att.source.flip){ const box = enemy.x = att.x - att.width; } else { enemy.x = att.x + att.width;  }"
           }],
           "defBlocks": [],
           "execution": "const {character} = data; character.move(character.speed<<4); "
@@ -1871,7 +1871,7 @@
             "x":72,
             "y":0,
             "offset": {"xf": 0},
-            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; enemy.x = att.x + att.width;"
+            "hit": "const {att, tgt} = data; att.source.currentAction.current = 22; att.source.currentAction.total = 100; const enemy = tgt.owner; if(att.source.flip){ const box = enemy.x = att.x - att.width; } else { enemy.x = att.x + att.width;  }"
           }],
           "defBlocks": [],
           "execution": "const {character} = data; character.move(character.speed<<4); "
@@ -2557,8 +2557,7 @@
       ],
       "keys": "^szj$",
       "duration": 1000,
-      "cancelable": false,
-      "createBlock": "if (this.current < 11) return; let b = new Block(BlockType.attack, instance, frame.width - 20, 20, instance.flip ? instance.x - frame.width * 2 + 20 : instance.x + frame.width, instance.y - 40); b.damage = 'hm'; b.source = instance.owner; b.execute = (att, def) => { console.log('execute block'); att.source.character.currentAction.total = 100}; return b"
+      "cancelable": false
     }
   },
   "sprites": {

@@ -153,6 +153,25 @@ class Controller {
     // this.timer = setTimeout(this.clearBuffer, InputClearInterval)
   }
 
+  setFlip(flip) {
+    const target = 'd'
+    const replace = 'a'
+
+    for(let i = this.start; i!= this.end; i = (i + 1) % this.queue.length ) {
+      if(this.queue[i]) {
+          if (this.queue[i].key === target && this.queue[i].counter) {
+            this.queue[i].key = replace
+          } 
+      }
+    }
+
+    if (this.keys[target]) {
+      this.keys[target] = false
+      this.keys[replace] = true
+    }
+    
+  }
+
   getStr() {
     let ret = []
     for(let i = this.start; i!= this.end; i = (i + 1) % this.queue.length ) {

@@ -42,7 +42,7 @@ class Block {
 
   static findTarget(ablock, tblocks) {
     for(let i = 0; i < tblocks.length; i++) {
-      if (ablock.owner !== tblocks[i].owner) {
+      if (ablock.source !== tblocks[i].owner) {
         if (Block.hasIntersection(ablock, tblocks[i])) {
           return tblocks[i]
         }
