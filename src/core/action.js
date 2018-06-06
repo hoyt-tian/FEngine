@@ -83,8 +83,12 @@ class Action {
             const prev = this.current
             this.current = (this.current + 1 ) % this.total
         } else if (loop.start !== undefined && loop.end !== undefined) {
-            if (this.current < this.loop.end) {
+            if (this.current < this.loop.end || this.current > this.loop.end) {
                 this.current++
+                if (this.current === this.total) { 
+                    this.current = -1
+                    return -1
+                }
             } else if (this.current === this.loop.end) {
                 this.current = this.loop.start
             }

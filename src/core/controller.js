@@ -129,6 +129,25 @@ class Controller {
               this.character.setStatus('stand')
             }
             break
+          case 'jump':
+          case 'fall':
+            motion = this.getMotion()
+            switch(motion) {
+              case 'lp':
+                this.character.setStatus('jlp', true)
+                console.log('light punch when jump')
+                break
+              case 'lk':
+                console.log('light kick when jump')
+                break
+              case 'hp':
+                console.log('heavy punch when jump')
+                break
+              case 'hk':
+                console.log('heavy kick when jump')
+                break
+            }
+            break;
           default:
             motion = this.getMotion()
             if (motion && motion !== this.character.status) {

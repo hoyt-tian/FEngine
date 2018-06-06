@@ -515,7 +515,7 @@
       "base": "./assets/character/iori/jump",
       "name": "jump",
       "start": 0,
-      "total": 13,
+      "total": 5,
       "suffix": "png",
       "loop": false,
       "frames": [
@@ -558,9 +558,25 @@
           "counter": 0,
           "attBlocks": [],
           "defBlocks": []
-        },
+        }
+      ],
+      "url": "http://oss.emugif.com/picture2014/kof97/iori/a07.gif",
+      "duration": 500,
+      "cancelable": false
+    },
+    "fall": {
+      "base": "./assets/character/iori/fall",
+      "name": "jump",
+      "start": 0,
+      "total": 4,
+      "suffix": "png",
+      "loop": {
+        "start": 2,
+        "end": 2
+      },
+      "frames": [
         {
-          "imgUrl": "./assets/character/iori/jump/5.png",
+          "imgUrl": "./assets/character/iori/fall/0.png",
           "audioUrl": null,
           "redrawCount": 3,
           "counter": 0,
@@ -568,7 +584,7 @@
           "defBlocks": []
         },
         {
-          "imgUrl": "./assets/character/iori/jump/6.png",
+          "imgUrl": "./assets/character/iori/fall/1.png",
           "audioUrl": null,
           "redrawCount": 3,
           "counter": 0,
@@ -576,7 +592,7 @@
           "defBlocks": []
         },
         {
-          "imgUrl": "./assets/character/iori/jump/7.png",
+          "imgUrl": "./assets/character/iori/fall/2.png",
           "audioUrl": null,
           "redrawCount": 3,
           "counter": 0,
@@ -584,39 +600,7 @@
           "defBlocks": []
         },
         {
-          "imgUrl": "./assets/character/iori/jump/8.png",
-          "audioUrl": null,
-          "redrawCount": 3,
-          "counter": 0,
-          "attBlocks": [],
-          "defBlocks": []
-        },
-        {
-          "imgUrl": "./assets/character/iori/jump/9.png",
-          "audioUrl": null,
-          "redrawCount": 3,
-          "counter": 0,
-          "attBlocks": [],
-          "defBlocks": []
-        },
-        {
-          "imgUrl": "./assets/character/iori/jump/10.png",
-          "audioUrl": null,
-          "redrawCount": 3,
-          "counter": 0,
-          "attBlocks": [],
-          "defBlocks": []
-        },
-        {
-          "imgUrl": "./assets/character/iori/jump/11.png",
-          "audioUrl": null,
-          "redrawCount": 3,
-          "counter": 0,
-          "attBlocks": [],
-          "defBlocks": []
-        },
-        {
-          "imgUrl": "./assets/character/iori/jump/12.png",
+          "imgUrl": "./assets/character/iori/fall/3.png",
           "audioUrl": null,
           "redrawCount": 3,
           "counter": 0,
@@ -1035,6 +1019,57 @@
       "duration": 400,
       "cancelable": false
     },
+    "jlp": {
+      "base": "./assets/character/iori/jlp",
+      "name": "jump punch",
+      "start": 0,
+      "total": 3,
+      "suffix": "png",
+      "loop": {
+        "start": 2,
+        "end": 2
+      },
+      "frames": [
+        {
+          "imgUrl": "./assets/character/iori/jlp/0.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/jlp/1.png",
+          "audioUrl": null,
+          "redrawCount": 8,
+          "counter": 0,
+          "attBlocks": [{
+            "x": 52,
+            "y": -20,
+            "width": 32,
+            "height": 37,
+            "hit": "const {att} = data; att.source.setStatus('fall', true); att.source.currentAction.current = att.source.currentAction.loop.start "
+          }],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/jlp/2.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [{
+            "x": 52,
+            "y": -20,
+            "width": 32,
+            "height": 37,
+            "hit": "const {att} = data; att.source.setStatus('fall', true); att.source.currentAction.current = att.source.currentAction.loop.start "
+          }],
+          "defBlocks": []
+        }
+      ],
+      "duration": 400,
+      "cancelable": false
+    },
     "hm": {
       "base": "./assets/character/iori/hm",
       "name": "hurt medium",
@@ -1096,12 +1131,16 @@
       "cancelable": false
     },
     "drop": {
+      "desc": "摔倒的情况，需要根据当前的高度决定下落的帧数，倒地之后应当自动起身",
       "base": "./assets/character/iori/drop",
       "name": "drop",
       "start": 0,
       "total": 6,
       "suffix": "png",
-      "loop": false,
+      "loop": {
+        "start": 1,
+        "end": 1
+      },
       "frames": [
         {
           "imgUrl": "./assets/character/iori/drop/0.png",

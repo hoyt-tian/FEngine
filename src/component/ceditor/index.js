@@ -28,6 +28,9 @@ class CEditor extends Component{
             {name: '重拳', key: 'hp'},
             {name: '重腿', key: 'hk'},
             {name: '受伤', key: 'hm'},
+            {name: '坠落', key: 'drop'},
+            {name: '起身', key: 'getup'},
+            {name: '轻拳（空中）', key: 'jlp'}
 
         ]
         return actions.map(i => <Item key={i.key}>{i.name}</Item>)

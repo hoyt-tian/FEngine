@@ -3,6 +3,7 @@ class Player {
         this.character = character
         this.controller = controller
         this.character.owner = this
+        this.character.actions['jump'].nextStatus = 'fall'
         if (this.character.actions['drop']) {
             this.character.actions['drop'].nextStatus = 'getup'
         } 
