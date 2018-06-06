@@ -14,15 +14,22 @@ class Battle extends Component {
         this.state = {
             lastFrameTime: null,
             keys: '',
-            showBlock: true,
+            showBlock: false,
             p1hp: 0,
             p1hpMax: 0,
             p2hp: 0,
-            p2hpMax: 0
+            p2hpMax: 0,
+            stage: props.stage
         }
 
         this.width = this.props.width || 800
         this.height = this.props.height || 600
+        this.viewbox = {
+            width: this.width,
+            height: this.height,
+            availiableHeight: this.height - this.state.stage.horizontalOffset,
+            left: (this.state.stage.width - this.width) >> 1,
+        }
         this.items = []
 
         this.p1 = new Player(this.props.character || this.props.p1, new Controller(this.props.character || this.props.p1))
@@ -32,14 +39,14 @@ class Battle extends Component {
             this.p2 = new Player(this.props.p2, new Controller(this.props.p2) )
             this.state.p2hp = this.state.p2hpMax = this.p2.hp
             this.place(this.p2.character)
-            this.p2.character.x = this.width / 2
+            this.p2.character.x = this.viewbox.left + this.width * 0.618
             this.p2.setFlip(true)
         }
         
 
         // this.p1.character.flip = true
         this.place(this.p1.character)
-
+        this.p1.character.x = this.viewbox.left + this.width * 0.382
         this.bg = null
     }
 
@@ -54,7 +61,7 @@ class Battle extends Component {
     }
 
     place(character) {
-        character.y = this.height
+        character.y = this.viewbox.availiableHeight
         this.addToStage(character)
     }
 
@@ -123,7 +130,7 @@ class Battle extends Component {
                         this.ctx.save()
                         this.ctx.scale(b.flip ? -1 : 1, 1)
                         this.ctx.strokeStyle = Block.blockColor(b.type)
-                        this.ctx.strokeRect(b.flip ? -b.x-b.width : b.x, b.y - b.height, b.width, b.height)
+                        this.ctx.strokeRect(b.flip ? -b.x-b.width + this.viewbox.left : b.x - this.viewbox.left, b.y - b.height, b.width, b.height)
                         this.ctx.restore()
                     }
                 })
@@ -133,12 +140,36 @@ class Battle extends Component {
         // clear useless block
     }
 
+    fixPos(character) {
+        if (character.x < 0) character.x = 0
+        else if (character.x > this.state.stage.width) character.x = this.state.stage.width
+    }
+
     redraw = (timestamp) => {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
+
+
+        if (this.state.stage) {
+            this.ctx.save()
+            this.ctx.drawImage(
+                this.state.stage.currentFrame.image,
+                this.viewbox.left,
+                0,
+                this.width,
+                this.height,
+                0,
+                0,
+                this.width,
+                this.height
+            )
+            this.ctx.restore()
+            this.state.stage.next()
+        }
+
         if(this.bg) {
             this.ctx.save()
             this.ctx.fillStyle = this.bg
-            this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height)
+            this.ctx.fillRect(0, 0, this.width, this.height)
             this.ctx.restore()
         }
         this.updateFlip(this.p1, this.p2)
@@ -154,13 +185,31 @@ class Battle extends Component {
             this.ctx.scale( item.flip === true ? -1 : 1, 1)
             this.ctx.drawImage(
                 item.currentFrame.image,
-                item.flip === true ? -item.x : item.x, 
+                item.flip ? -item.x + this.viewbox.left : item.x - this.viewbox.left, 
                 (item.y - item.currentFrame.image.height ) || 0
             )
             this.ctx.restore()
             item.next({battle: this})
-        })        
-        this.items = this.items.filter(item => item.x < this.width)
+        })       
+        
+        
+        this.p1 && this.fixPos( this.p1.character)
+        this.p2 && this.fixPos( this.p2.character)
+
+        this.items = this.items.filter(item =>  (item.x >= 0) && (item.x <= this.state.stage.width) )
+        if (this.p1 && this.p2) {
+            const b1 = this.p1.character.box()
+            const b2 = this.p2.character.box()
+            const left = b1.x < b2.x ? b1.x : b2.x
+            const right = b1.x+b1.width  < b2.x+b2.width ? b2.x+b2.width : b1.x+b1.width
+            const mid = (left + right) / 2
+            this.viewbox.left = mid - this.width/2
+            if (this.viewbox.left < 0) {
+                this.viewbox.left = 0
+            } else if (this.viewbox.left + this.width > this.state.stage.width) {
+                this.viewbox.left = this.state.stage.width - this.width
+            }
+        }
         this.timer = requestAnimationFrame(this.redraw) 
     }
 

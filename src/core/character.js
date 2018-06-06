@@ -330,6 +330,7 @@ class Character {
     move(ox = this.speed, oy = 0) {
         this.x += ox * (this.flip ? -1 : 1)
         this.y += oy
+        if (this.x < 0) this.x = 0
     }
 
     toJSON() {

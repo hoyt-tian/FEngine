@@ -1,0 +1,15 @@
+{
+  "stage": [
+    {
+      "name": "street",
+      "frames": [
+        {
+          "imgUrl": "./assets/stage/street.jpg",
+          "redrawCount": 2
+        }
+      ],
+      "audioUrl": null,
+      "horizontalOffset": 0
+    }
+  ]
+}

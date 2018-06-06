@@ -35,9 +35,9 @@ class Action {
                 )
             }
         }
-        
         return Promise.all(promises).then((frames) => {
             this.__load__ = true
+            this.total = this.frames.length
             this.frames = frames
             return new Promise((resolve) => resolve(this) )
         })
