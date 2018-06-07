@@ -5,10 +5,10 @@ export const VKeys = {
   0x41: 'a',
   0x44: 'd',
   0x00: 'z',
-  0x4A: 'j',
-  0x4B: 'k',
-  0x4C: 'l',
-  0xBA : ';'
+  0x4A: 'A',
+  0x4B: 'B',
+  0x4C: 'C',
+  0xBA : 'D'
 }
 
 export const keyCodeConversion = (keyCode) => {
@@ -27,10 +27,10 @@ class Controller {
         'squat': /^s+$/,
         'jump': /^[adz]*w+$/,
         'slipback': /^aza$/,
-        'lp': /^j$/,
-        'lk': /^k$/,
-        'hp': /^l$/,
-        'hk': /^;$/
+        'lp': /^A$/,
+        'lk': /^B$/,
+        'hp': /^C$/,
+        'hk': /^D$/
       },
       keys:{}
     })

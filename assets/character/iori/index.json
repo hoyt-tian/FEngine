@@ -1448,7 +1448,7 @@
           "defBlocks": []
         }
       ],
-      "keys": "^sdzj$",
+      "keys": "^sdz[AC]$",
       "url": "http://oss.emugif.com/picture2014/kof97/iori/c07.gif",
       "duration": 500,
       "cancelable": false
@@ -1788,7 +1788,7 @@
           "defBlocks": []
         }
       ],
-      "keys": "^sazj$",
+      "keys": "^saz[AC]$",
       "duration": 500,
       "cancelable": false
     },
@@ -2730,7 +2730,7 @@
           "defBlocks": []
         }
       ],
-      "keys": "^szj$",
+      "keys": "^sz[AC]$",
       "duration": 1000,
       "cancelable": false
     }
