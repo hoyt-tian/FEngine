@@ -43,12 +43,11 @@ export default class Frame {
                 b.type = BlockType.attack
                 b.source = data.instance
                 block = new Block(b)
-
+                block.y += data.instance.y
                 if( data.instance.flip) {
-
+                    block.x = data.instance.x - block.width - b.x
                 } else {
                     block.x += data.instance.x
-                    block.y += data.instance.y
                 }
 
            }

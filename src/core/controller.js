@@ -5,10 +5,10 @@ export const VKeys = {
   0x41: 'a',
   0x44: 'd',
   0x00: 'z',
-  0x4A: 'j',
-  0x4B: 'k',
-  0x4C: 'l',
-  0xBA : ';'
+  0x4A: 'A',
+  0x4B: 'B',
+  0x4C: 'C',
+  0xBA : 'D'
 }
 
 export const keyCodeConversion = (keyCode) => {
@@ -27,10 +27,10 @@ class Controller {
         'squat': /^s+$/,
         'jump': /^[adz]*w+$/,
         'slipback': /^aza$/,
-        'lp': /^j$/,
-        'lk': /^k$/,
-        'hp': /^l$/,
-        'hk': /^;$/
+        'lp': /^A$/,
+        'lk': /^B$/,
+        'hp': /^C$/,
+        'hk': /^D$/
       },
       keys:{}
     })
@@ -129,6 +129,25 @@ class Controller {
               this.character.setStatus('stand')
             }
             break
+          case 'jump':
+          case 'fall':
+            motion = this.getMotion()
+            switch(motion) {
+              case 'lp':
+                this.character.setStatus('jlp', true)
+                console.log('light punch when jump')
+                break
+              case 'lk':
+                console.log('light kick when jump')
+                break
+              case 'hp':
+                console.log('heavy punch when jump')
+                break
+              case 'hk':
+                console.log('heavy kick when jump')
+                break
+            }
+            break;
           default:
             motion = this.getMotion()
             if (motion && motion !== this.character.status) {
@@ -149,8 +168,28 @@ class Controller {
       // console.log('stand up')
       this.character.setStatus('stand')
     }
+    
     this.character.doAction(this, battle, originStatus)
     // this.timer = setTimeout(this.clearBuffer, InputClearInterval)
+  }
+
+  setFlip(flip) {
+    const target = 'd'
+    const replace = 'a'
+
+    for(let i = this.start; i!= this.end; i = (i + 1) % this.queue.length ) {
+      if(this.queue[i]) {
+          if (this.queue[i].key === target && this.queue[i].counter) {
+            this.queue[i].key = replace
+          } 
+      }
+    }
+
+    if (this.keys[target]) {
+      this.keys[target] = false
+      this.keys[replace] = true
+    }
+    
   }
 
   getStr() {

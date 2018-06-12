@@ -101,11 +101,34 @@ class Character {
     }
 
     next(data, loop = false) {
+        let prev = this.currentAction
         let ret = this.currentAction.next({...data, character: this, player: this.owner, controller: this.owner.controller}, loop)
         if (ret === -1) {
-            this.setStatus('stand')
+            this.setStatus(prev.nextStatus || 'stand')
         }
     }
+
+    box() {
+        const ret = {
+            x: this.x,
+            y: this.y,
+            width: this.currentFrame.image.width,
+            height: this.currentFrame.image.height,
+        }
+        if (this.flip) ret.x = ret.x - ret.width
+        return ret
+    }
+
+    setFlip(flip) {
+        this.flip = flip
+        if (flip) {
+            this.x = this.x + this.currentFrame.image.width
+        } else {
+            this.x = this.x - this.currentFrame.image.width
+        }
+        this.setStatus('stand')
+    }
+
 
     static fetchAll() {
         return fetch('./assets/character/index.json')
@@ -129,17 +152,23 @@ class Character {
         })
     }
 
-    setStatus(status) {
-        
-        if ( this.currentAction.cancelable === false && this.currentAction.current !== -1) {
-            return
-        }
-
-        if (this.status !== status ) {
+    setStatus(status, force = false) {
+        if (force === false) {
+            if ( this.currentAction.cancelable === false && this.currentAction.current !== -1) {
+                return
+            }
+    
+            if (this.status !== status ) {
+                let current = this.currentAction
+                this.status = status
+                current.reset()
+            }
+        } else {
             let current = this.currentAction
             this.status = status
             current.reset()
         }
+        
     }
 
     getSprite(name) {
@@ -156,13 +185,14 @@ class Character {
     currentBlock(data) {
         let blocks = []
         const frame = this.currentFrame
+        const box = this.box()
         let target = new Block({
             type: BlockType.target, 
             owner: this, 
-            width: frame.image.width, 
-            height: frame.image.height, 
-            x: this.flip ? this.x - frame.image.width : this.x, 
-            y: this.y})
+            width: box.width, 
+            height: box.height, 
+            x: box.x,
+            y: box.y})
         blocks.push(target)
         try{
             let ablock = this.currentAction.currentBlock({...data, instance: this, owner: this.owner})
@@ -174,6 +204,7 @@ class Character {
         }catch(e) {
             console.log('character current Block error')
         }
+        blocks.forEach(b => b.flip = this.flip)
         return blocks
     }
 
@@ -195,27 +226,17 @@ class Character {
                 // this.x += (this.flip ? -this.speed : this.speed) * 2
                 break
             case 'jump':
-                switch(this.currentAction.current) {
-                    case 0:
-                        if( this._y == null) {
-                            this._y = this.y
-                        }
-                        break
-                    case this.currentAction.total-1:
-                        if (this._y != null) {
-                            this.y = this._y
-                            this._y = null
-                        }                        
-                        break
-                    default:
-                        this.y = this._y - Math.sin(Math.PI * (this.currentAction.current + this.currentAction.currentFrame.counter / 10)/ this.currentAction.total) * this.jump
-                        if (controller) {
-                            if (controller.keys['d'])
-                                this.move()
-                            else if (controller.keys['a'])
-                                this.move(-this.speed)
-                        }
-                        break
+                const offy = - Math.sin(Math.PI * ( (this.currentAction.current + this.currentFrame.counter/10)/this.currentAction.total) ) * this.jump / 5
+                if (controller) {
+                    if (controller.keys['d'])
+                        this.move(this.speed, offy)
+                    else if (controller.keys['a'])
+                        this.move(-this.speed, offy)
+                    else {
+                        this.move(0, offy)
+                    }
+                } else {
+                    this.move(0, offy)
                 }
                 break
             case 'slipback':
@@ -233,6 +254,69 @@ class Character {
                     this.move(this.speed * -2)
                 }*/
                 break
+            case 'drop':
+                if (this.currentAction.current === 0) {
+                    this.move(-this.speed * 4, -this.jump/10)
+                } else if (this.currentAction.loop && this.currentAction.loop.start 
+                    && this.currentAction.loop.end 
+                    && this.currentAction.current >= this.currentAction.loop.start
+                    && this.currentAction.current <= this.currentAction.loop.end
+                ) {
+                    if (this.y < battle.height) { 
+                        this.move(-this.speed * 4, this.jump/5)
+                    } else { 
+                        this.y = battle.height
+                        this.currentAction.current = this.currentAction.loop.end + 1
+                    }
+                } else {
+                    this.move(-this.speed)
+                }
+                break
+            case 'fall':
+                if (this.currentAction.loop && this.currentAction.loop.start 
+                    && this.currentAction.loop.end 
+                    && this.currentAction.current >= this.currentAction.loop.start
+                    && this.currentAction.current <= this.currentAction.loop.end
+                ) {
+                    if (this.y < battle.height) { 
+                        const offy = this.jump/10
+                        if (controller) {
+                            if (controller.keys['d'])
+                                this.move(this.speed, offy)
+                            else if (controller.keys['a'])
+                                this.move(-this.speed, offy)
+                            else {
+                                this.move(0, offy)
+                            }
+                        } else {
+                            this.move(0, offy)
+                        }
+                    } else { 
+                        this.y = battle.height
+                        this.currentAction.current = this.currentAction.loop.end + 1
+                    }
+                }
+                break
+            case 'getup':
+                this.y = battle.height
+                break
+            case 'jlp':
+                if (this.currentAction.loop && this.currentAction.loop.start 
+                    && this.currentAction.loop.end 
+                    && this.currentAction.current >= this.currentAction.loop.start
+                    && this.currentAction.current <= this.currentAction.loop.end
+                ) {
+                    const speed = controller.keys['d'] ? this.speed : (controller.keys['a'] ? -this.speed : 0)
+                    if (this.y < battle.height) { 
+                        this.move(speed, this.jump/5)
+                    } else { 
+                        this.y = battle.height
+                        this.setStatus('stand', true)
+                    }
+                } else {
+                    this.move(0, this.jump/20)
+                }
+                break
             default:
                 /*
                 if( this.specialActions && this.specialActions[this.status]) {
@@ -245,12 +329,13 @@ class Character {
     
     move(ox = this.speed, oy = 0) {
         this.x += ox * (this.flip ? -1 : 1)
-        this.y += oy * (this.flip ? -1 : 1)
+        this.y += oy
+        if (this.x < 0) this.x = 0
     }
 
     toJSON() {
         const {status, owner, _config, index, x, y, flip, base, ...rest} = this
-        const baseActions = ['stand', 'walk', 'back', 'run', 'squat', 'jump', 'slipback', 'lp', 'lk', 'hp', 'hk', 'hm']
+        const baseActions = ['stand', 'walk', 'back', 'run', 'squat', 'jump', 'slipback', 'lp', 'lk', 'hp', 'hk', 'hm', 'drop', 'getup', 'jlp']
         const baseAction = {}
         baseActions.forEach(k => baseAction[k] = this.actions[k])
         rest.actions = baseAction

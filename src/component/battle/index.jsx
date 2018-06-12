@@ -6,6 +6,7 @@ import Player from '../../core/player'
 import './index.less'
 import Sprite from '../../core/sprite'
 import HP from '../hp/index.jsx'
+import Joystick from 'react-svg-joystick'
 
 class Battle extends Component {
     constructor(props, context) {
@@ -14,15 +15,21 @@ class Battle extends Component {
         this.state = {
             lastFrameTime: null,
             keys: '',
-            showBlock: true,
+            showBlock: false,
             p1hp: 0,
             p1hpMax: 0,
             p2hp: 0,
-            p2hpMax: 0
+            p2hpMax: 0,
+            stage: props.stage
         }
-
-        this.width = this.props.width || 800
-        this.height = this.props.height || 600
+        this.width = this.props.width || 1280
+        this.height = this.props.height || 720
+        this.viewbox = {
+            width: this.width,
+            height: this.height,
+            availiableHeight: this.height - this.state.stage.horizontalOffset,
+            left: (this.state.stage.width - this.width) >> 1,
+        }
         this.items = []
 
         this.p1 = new Player(this.props.character || this.props.p1, new Controller(this.props.character || this.props.p1))
@@ -32,14 +39,14 @@ class Battle extends Component {
             this.p2 = new Player(this.props.p2, new Controller(this.props.p2) )
             this.state.p2hp = this.state.p2hpMax = this.p2.hp
             this.place(this.p2.character)
-            this.p2.character.x = this.width / 2
-            this.p2.character.flip = true
+            this.p2.character.x = this.viewbox.left + this.width * 0.618
+            this.p2.setFlip(true)
         }
         
 
         // this.p1.character.flip = true
         this.place(this.p1.character)
-
+        this.p1.character.x = this.viewbox.left + this.width * 0.382
         this.bg = null
     }
 
@@ -54,7 +61,7 @@ class Battle extends Component {
     }
 
     place(character) {
-        character.y = this.height
+        character.y = this.viewbox.availiableHeight
         this.addToStage(character)
     }
 
@@ -117,29 +124,62 @@ class Battle extends Component {
         })
 
         if(this.state.showBlock) {
-            this.ctx.save()
             Object.values(BlockType).forEach(t => {
                 blocks[t].forEach(b => {
                     if (b.alive) {
+                        this.ctx.save()
+                        this.ctx.scale(b.flip ? -1 : 1, 1)
                         this.ctx.strokeStyle = Block.blockColor(b.type)
-                        this.ctx.strokeRect(b.x, b.y - b.height, b.width, b.height)
+                        this.ctx.strokeRect(b.flip ? -b.x-b.width + this.viewbox.left : b.x - this.viewbox.left, b.y - b.height, b.width, b.height)
+                        this.ctx.restore()
                     }
                 })
             })
-            this.ctx.restore()
         }
 
         // clear useless block
     }
 
+    fixPos(character) {
+        if (character.x < 0) character.x = 0
+        else if (character.x > this.state.stage.width) character.x = this.state.stage.width
+    }
+
+    setTransform = () => {
+        // const scale = this.height / this.state.stage.currentFrame.image.height
+
+        // this.ctx.transform(scale *  this.width / this.state.stage.currentFrame.image.width, 0, 0, scale, 0 , 0)
+    }
+
     redraw = (timestamp) => {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
+
+        if (this.state.stage) {
+            this.ctx.save()
+            // this.setTransform()
+            this.ctx.drawImage(
+                this.state.stage.currentFrame.image,
+                this.viewbox.left,
+                0,
+                this.width,
+                this.height,
+                0,
+                0,
+                this.width,
+                this.height
+            )
+            this.ctx.restore()
+            this.state.stage.next()
+        }
+
         if(this.bg) {
             this.ctx.save()
+            this.setTransform()
             this.ctx.fillStyle = this.bg
-            this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height)
+            this.ctx.fillRect(0, 0, this.width, this.height)
             this.ctx.restore()
         }
+        this.updateFlip(this.p1, this.p2)
         this.p1.controller.work(this)
         this.p2 && this.p2.controller.work(this)
         this.setState({
@@ -152,14 +192,57 @@ class Battle extends Component {
             this.ctx.scale( item.flip === true ? -1 : 1, 1)
             this.ctx.drawImage(
                 item.currentFrame.image,
-                item.flip === true ? -item.x : item.x, 
+                item.flip ? -item.x + this.viewbox.left : item.x - this.viewbox.left, 
                 (item.y - item.currentFrame.image.height ) || 0
             )
             this.ctx.restore()
             item.next({battle: this})
-        })        
-        this.items = this.items.filter(item => item.x < this.width)
+        })       
+        
+        
+        this.p1 && this.fixPos( this.p1.character)
+        this.p2 && this.fixPos( this.p2.character)
+
+        this.items = this.items.filter(item =>  (item.x >= 0) && (item.x <= this.state.stage.width) )
+        if (this.p1 && this.p2) {
+            const b1 = this.p1.character.box()
+            const b2 = this.p2.character.box()
+            const left = b1.x < b2.x ? b1.x : b2.x
+            const right = b1.x+b1.width  < b2.x+b2.width ? b2.x+b2.width : b1.x+b1.width
+            const mid = (left + right) / 2
+            this.viewbox.left = mid - this.width/2
+            if (this.viewbox.left < 0) {
+                this.viewbox.left = 0
+            } else if (this.viewbox.left + this.width > this.state.stage.width) {
+                this.viewbox.left = this.state.stage.width - this.width
+            }
+        }
         this.timer = requestAnimationFrame(this.redraw) 
+    }
+
+    updateFlip = (p1, p2) => {
+       
+        if (p1 && p2 ) {
+            const c1 = p1.character
+            const c2 = p2.character
+
+            const b1 = p1.character.box()
+            const b2 = p2.character.box()
+
+            if (p1.character.flip === false) {
+                if (b1.x > b2.x) {
+                    p1.setFlip(true)
+                    p2.setFlip(false)
+                }
+            } else {
+                if (b2.x > b1.x + b1.width) {
+                    p1.setFlip(false)
+                    p2.setFlip(true)
+                }
+            }
+            
+            // p1.controller.setFlip(flip, p2.controller)
+        }        
     }
 
 
@@ -179,6 +262,20 @@ class Battle extends Component {
         this.p1.controller.release(vkey)
     }
 
+    joyStickDown = (vk) => {
+        vk = this.p1.controller.fixVkey(vk)
+        if (vk) {
+            this.p1.controller.hold(vk)
+            this.p1.controller.enqueue(vk)
+        }
+    }
+
+    joyStickUp = (vk) => {
+        this.p1.controller.enqueue('z')
+        vk = this.p1.controller.fixVkey(vk)
+        this.p1.controller.release(vk)
+    }
+
     componentDidMount() {
         this.timer = requestAnimationFrame(this.redraw)
         EventListener.listen(document, 'keydown', this.keyDown)
@@ -192,7 +289,7 @@ class Battle extends Component {
 
     render() {
         return (
-        <section className="battle">
+        <section className={this.props.rotate ? 'battle rotate' : 'battle'} style={this.props.style}>
             <section>
                 <section className="topbar">
                     {this.p1 && this.props.showP1HP && <HP max={this.state.p1hpMax} val={this.state.p1hp} width={300} height={30} />}
@@ -200,9 +297,7 @@ class Battle extends Component {
                 </section>
                 <canvas width={this.width} height={this.height} ref={this.attachCanvas}/>
             </section>
-            <section>
-                <div>{this.state.keys}</div>
-            </section>
+            {this.props.useJoystick && <section className="ja"><Joystick onKeyPress={this.joyStickDown} onKeyRelease={this.joyStickUp} /></section>}
         </section>)
     }
 }
