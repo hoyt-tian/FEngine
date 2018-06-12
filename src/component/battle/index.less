@@ -1,5 +1,13 @@
 .battle {
     display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+*{
+    user-select:none;
+    -webkit-touch-callout: none;
 }
 
 .topbar {
@@ -9,3 +17,17 @@
     position: relative;
     margin-top: -30px;
 }
+
+.rotate {
+    transform:rotate(90deg);
+    transform-origin: bottom left;
+ }
+
+ .ja {
+     width: 100vw;
+
+     .joystick {
+         width: 100%;
+         height: 100%;
+     }
+ }

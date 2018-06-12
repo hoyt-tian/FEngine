@@ -39,8 +39,8 @@ const config = {
               },
             {
                 test: /\.jsx?$/,
-                exclude: /node_modules/,
-                include: path.resolve(__dirname, 'src'),
+                include: [path.resolve(__dirname, 'src'), path.resolve(__dirname, './node_modules/react-svg-joystick/src')],
+                // exclude: /node_modules/,
                 loader: 'babel-loader',
                 query: {
                     presets: ['react', 'es2015', 'stage-0'],
@@ -91,6 +91,9 @@ Object.keys(package.entry).forEach((k) => {
 })
 
 
-
+config.devServer = {
+    host: "0.0.0.0", //本机的局域网ip
+    open: true //是否运行成功后直接打开页面
+}
 
 module.exports = config

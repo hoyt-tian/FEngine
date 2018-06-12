@@ -6,6 +6,7 @@ import Player from '../../core/player'
 import './index.less'
 import Sprite from '../../core/sprite'
 import HP from '../hp/index.jsx'
+import Joystick from 'react-svg-joystick'
 
 class Battle extends Component {
     constructor(props, context) {
@@ -21,9 +22,8 @@ class Battle extends Component {
             p2hpMax: 0,
             stage: props.stage
         }
-
-        this.width = this.props.width || 800
-        this.height = this.props.height || 600
+        this.width = this.props.width || 1280
+        this.height = this.props.height || 720
         this.viewbox = {
             width: this.width,
             height: this.height,
@@ -145,12 +145,18 @@ class Battle extends Component {
         else if (character.x > this.state.stage.width) character.x = this.state.stage.width
     }
 
+    setTransform = () => {
+        // const scale = this.height / this.state.stage.currentFrame.image.height
+
+        // this.ctx.transform(scale *  this.width / this.state.stage.currentFrame.image.width, 0, 0, scale, 0 , 0)
+    }
+
     redraw = (timestamp) => {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
 
-
         if (this.state.stage) {
             this.ctx.save()
+            // this.setTransform()
             this.ctx.drawImage(
                 this.state.stage.currentFrame.image,
                 this.viewbox.left,
@@ -168,6 +174,7 @@ class Battle extends Component {
 
         if(this.bg) {
             this.ctx.save()
+            this.setTransform()
             this.ctx.fillStyle = this.bg
             this.ctx.fillRect(0, 0, this.width, this.height)
             this.ctx.restore()
@@ -255,6 +262,20 @@ class Battle extends Component {
         this.p1.controller.release(vkey)
     }
 
+    joyStickDown = (vk) => {
+        vk = this.p1.controller.fixVkey(vk)
+        if (vk) {
+            this.p1.controller.hold(vk)
+            this.p1.controller.enqueue(vk)
+        }
+    }
+
+    joyStickUp = (vk) => {
+        this.p1.controller.enqueue('z')
+        vk = this.p1.controller.fixVkey(vk)
+        this.p1.controller.release(vk)
+    }
+
     componentDidMount() {
         this.timer = requestAnimationFrame(this.redraw)
         EventListener.listen(document, 'keydown', this.keyDown)
@@ -268,7 +289,7 @@ class Battle extends Component {
 
     render() {
         return (
-        <section className="battle">
+        <section className={this.props.rotate ? 'battle rotate' : 'battle'} style={this.props.style}>
             <section>
                 <section className="topbar">
                     {this.p1 && this.props.showP1HP && <HP max={this.state.p1hpMax} val={this.state.p1hp} width={300} height={30} />}
@@ -276,9 +297,7 @@ class Battle extends Component {
                 </section>
                 <canvas width={this.width} height={this.height} ref={this.attachCanvas}/>
             </section>
-            <section>
-                <div>{this.state.keys}</div>
-            </section>
+            {this.props.useJoystick && <section className="ja"><Joystick onKeyPress={this.joyStickDown} onKeyRelease={this.joyStickUp} /></section>}
         </section>)
     }
 }
