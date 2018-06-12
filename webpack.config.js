@@ -4,6 +4,7 @@ const html = require('html-webpack-plugin');
 const cleanup = require('clean-webpack-plugin');
 const cpy = require('copy-webpack-plugin')
 const package = require('./package.json')
+const fs = require('fs')
 
 const config = {
     entry: {},
@@ -39,7 +40,7 @@ const config = {
               },
             {
                 test: /\.jsx?$/,
-                include: [path.resolve(__dirname, 'src'), path.resolve(__dirname, './node_modules/react-svg-joystick/src')],
+                include: [path.resolve(__dirname, 'src'), fs.realpathSync(path.resolve(__dirname, './node_modules/react-svg-joystick/src'))],
                 // exclude: /node_modules/,
                 loader: 'babel-loader',
                 query: {
