@@ -282,7 +282,8 @@ class Battle extends Component {
         EventListener.listen(document, 'keyup', this.keyUp)
 
         if (this.props.stage.audio) {
-            this.props.stage.audio.play()
+            // tricky way to handle DOMException: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD
+            setTimeout(() => this.props.stage.audio.play(), 500)
         }
     }
 
@@ -294,12 +295,15 @@ class Battle extends Component {
     render() {
         return (
         <section className={this.props.rotate ? 'battle rotate' : 'battle'} style={this.props.style}>
-            <section>
-                <section className="topbar">
-                    {this.p1 && this.props.showP1HP && <HP max={this.state.p1hpMax} val={this.state.p1hp} width={300} height={30} />}
-                    {this.p2 && this.props.showP1HP && <HP max={this.state.p2hpMax} val={this.state.p2hp} flip={true} width={300} height={30} />}
+            <section className="battle-body">
+                <section>
+                    <section className="topbar">
+                        {this.p1 && this.props.showP1HP && <HP max={this.state.p1hpMax} val={this.state.p1hp} width={300} height={30} />}
+                        {this.p2 && this.props.showP1HP && <HP max={this.state.p2hpMax} val={this.state.p2hp} flip={true} width={300} height={30} />}
+                    </section>
+                    <canvas width={this.width} height={this.height} ref={this.attachCanvas}/>
                 </section>
-                <canvas width={this.width} height={this.height} ref={this.attachCanvas}/>
+                <section className="icons"><img src="./assets/music.svg" /></section>
             </section>
             {this.props.useJoystick && <section className="ja"><Joystick onKeyPress={this.joyStickDown} onKeyRelease={this.joyStickUp} /></section>}
         </section>)
