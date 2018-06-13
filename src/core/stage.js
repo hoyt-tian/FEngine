@@ -22,6 +22,7 @@ export default class Stage {
           throw err
         })
         audio.src = this.audioUrl
+        audio.autoplay = false
         this.audio = audio
     }    
     return this.action.loadResources().then(() => new Promise((resolve, reject) => resolve(this)) ) 
