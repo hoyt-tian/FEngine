@@ -30,7 +30,7 @@ npm i && npm run dev
 ## 游戏操作 / Game Operations
 使用键盘操作时，上下左右是wsad，ABCD的按键分别是jkl;
 
-When using keyboard, 'wsad' controls up/down/lef/right/,  and 'jkl;' are regarded as 'ABCD'
+When using keyboard, 'wsad' controls up/down/lef/right/, and 'jkl;' are regarded as 'ABCD'
 
 ## 出招表 / Skill sheet
 
@@ -40,6 +40,10 @@ When using keyboard, 'wsad' controls up/down/lef/right/,  and 'jkl;' are regarde
 葵花   ↓←A/C
 
 必杀技  ↓A
+
+奔跑 →→
+
+疾退  ←←
 
 # GitHub
 https://github.com/hoyt-tian/FEngine
