@@ -7,6 +7,7 @@ import './index.less'
 import Sprite from '../../core/sprite'
 import HP from '../hp/index.jsx'
 import Joystick from 'react-svg-joystick'
+import SVGButton from '../svgbutton'
 
 class Battle extends Component {
     constructor(props, context) {
@@ -280,16 +281,23 @@ class Battle extends Component {
         this.timer = requestAnimationFrame(this.redraw)
         EventListener.listen(document, 'keydown', this.keyDown)
         EventListener.listen(document, 'keyup', this.keyUp)
-
-        if (this.props.stage.audio) {
-            // tricky way to handle DOMException: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD
-            setTimeout(() => this.props.stage.audio.play(), 500)
-        }
     }
 
     componentWillUnmount() {
         cancelAnimationFrame(this.timer)
         this.timer = null
+    }
+
+    toggleMusic = (val) => {
+        if (val) {
+            if (this.props.stage.audio) {
+                this.props.stage.audio.play()
+            }
+        } else {
+            if (this.props.stage.audio) {
+                this.props.stage.audio.pause()
+            }
+        }
     }
 
     render() {
@@ -303,7 +311,9 @@ class Battle extends Component {
                     </section>
                     <canvas width={this.width} height={this.height} ref={this.attachCanvas}/>
                 </section>
-                <section className="icons"><img src="./assets/music.svg" /></section>
+                <section className="icons">
+                    <SVGButton src="./assets/music.svg" onChange={this.toggleMusic} toggled={false} />
+                </section>
             </section>
             {this.props.useJoystick && <section className="ja"><Joystick onKeyPress={this.joyStickDown} onKeyRelease={this.joyStickUp} /></section>}
         </section>)
