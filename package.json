@@ -8,7 +8,7 @@
     "index": "./src/entry/index/index.js"
   },
   "scripts": {
-    "start": "tnpm run dev",
+    "start": "npm run dev",
     "dev": "webpack-dev-server --hot --inline --content-base  ./dist",
     "rename": "find . -type f | sed -n \"p;s/frame_\\([0-9]*\\)_.*\\.png/\\1\\.png/g\" | xargs -n2 mv"
   },
