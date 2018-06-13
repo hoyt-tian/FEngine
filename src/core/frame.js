@@ -82,32 +82,11 @@ export default class Frame {
             })
         ]
         if (this.audioUrl) {
-            /*
-            resources.push(
-                new Promise( (resolve, reject) => {
-                    const audio = new Audio()
-                    audio.preload = 'auto'
-                    EventListener.listen(audio, 'load', () => {
-                        resolve(audio)
-                        console.log('download audio success')
-                    })
-                    EventListener.listen(audio, 'error', () => {
-                        console.log('download audio fail')
-                        reject(audio)
-                    })
-                    audio.src = this.audioUrl
-                } 
-            ))
-            */
            const audio = new Audio()
             audio.preload = 'auto'
-            EventListener.listen(audio, 'load', () => {
-                resolve(audio)
-                console.log('download audio success')
-            })
-            EventListener.listen(audio, 'error', () => {
-                console.log('download audio fail')
-                reject(audio)
+            EventListener.listen(audio, 'error', (err) => {
+                this.audio = null
+                throw err
             })
             audio.src = this.audioUrl
             this.audio = audio
