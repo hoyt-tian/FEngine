@@ -20,7 +20,7 @@ Character.fetchAll().then( (values) => {
           "redrawCount": 2
         }
       ],
-      "audioUrl": null,
+      "audioUrl": './assets/stage/street.mp3',
       "horizontalOffset": 0
     })
 

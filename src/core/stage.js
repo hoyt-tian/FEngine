@@ -1,4 +1,5 @@
 import Action from './action'
+import { EventListener } from '../util'
 
 export default class Stage {
   constructor(config) {
@@ -12,7 +13,19 @@ export default class Stage {
   }
 
   loadResources() {
-    return this.action.loadResources()
+    if (this.audioUrl) {
+        const audio = new Audio()
+        audio.loop = true
+        audio.preload = 'auto'
+        EventListener.listen(audio, 'error', (err) => {
+          this.audio = null
+          throw err
+        })
+        audio.src = this.audioUrl
+        audio.autoplay = false
+        this.audio = audio
+    }    
+    return this.action.loadResources().then(() => new Promise((resolve, reject) => resolve(this)) ) 
   }
 
   get currentFrame() {

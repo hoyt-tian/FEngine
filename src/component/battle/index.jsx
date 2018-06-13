@@ -7,6 +7,7 @@ import './index.less'
 import Sprite from '../../core/sprite'
 import HP from '../hp/index.jsx'
 import Joystick from 'react-svg-joystick'
+import SVGButton from '../svgbutton'
 
 class Battle extends Component {
     constructor(props, context) {
@@ -287,15 +288,32 @@ class Battle extends Component {
         this.timer = null
     }
 
+    toggleMusic = (val) => {
+        if (val) {
+            if (this.props.stage.audio) {
+                this.props.stage.audio.play()
+            }
+        } else {
+            if (this.props.stage.audio) {
+                this.props.stage.audio.pause()
+            }
+        }
+    }
+
     render() {
         return (
         <section className={this.props.rotate ? 'battle rotate' : 'battle'} style={this.props.style}>
-            <section>
-                <section className="topbar">
-                    {this.p1 && this.props.showP1HP && <HP max={this.state.p1hpMax} val={this.state.p1hp} width={300} height={30} />}
-                    {this.p2 && this.props.showP1HP && <HP max={this.state.p2hpMax} val={this.state.p2hp} flip={true} width={300} height={30} />}
+            <section className="battle-body">
+                <section>
+                    <section className="topbar">
+                        {this.p1 && this.props.showP1HP && <HP max={this.state.p1hpMax} val={this.state.p1hp} width={300} height={30} />}
+                        {this.p2 && this.props.showP1HP && <HP max={this.state.p2hpMax} val={this.state.p2hp} flip={true} width={300} height={30} />}
+                    </section>
+                    <canvas width={this.width} height={this.height} ref={this.attachCanvas}/>
                 </section>
-                <canvas width={this.width} height={this.height} ref={this.attachCanvas}/>
+                <section className="icons">
+                    <SVGButton src="./assets/music.svg" onChange={this.toggleMusic} toggled={false} />
+                </section>
             </section>
             {this.props.useJoystick && <section className="ja"><Joystick onKeyPress={this.joyStickDown} onKeyRelease={this.joyStickUp} /></section>}
         </section>)

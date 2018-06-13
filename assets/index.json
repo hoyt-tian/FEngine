@@ -8,7 +8,7 @@
           "redrawCount": 2
         }
       ],
-      "audioUrl": null,
+      "audioUrl": "./assets/stage/street.mid",
       "horizontalOffset": 0
     }
   ]
