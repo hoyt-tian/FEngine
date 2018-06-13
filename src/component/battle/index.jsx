@@ -280,6 +280,10 @@ class Battle extends Component {
         this.timer = requestAnimationFrame(this.redraw)
         EventListener.listen(document, 'keydown', this.keyDown)
         EventListener.listen(document, 'keyup', this.keyUp)
+
+        if (this.props.stage.audio) {
+            this.props.stage.audio.play()
+        }
     }
 
     componentWillUnmount() {
