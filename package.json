@@ -10,14 +10,24 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "webpack-dev-server --hot --inline --content-base  ./dist",
-    "rename": "find . -type f | sed -n \"p;s/frame_\\([0-9]*\\)_.*\\.png/\\1\\.png/g\" | xargs -n2 mv"
+    "rename": "find . -type f | sed -n \"p;s/frame_\\([0-9]*\\)_.*\\.png/\\1\\.png/g\" | xargs -n2 mv",
+    "eslint": "./node_modules/.bin/eslint --ext .js,.jsx ./src",
+    "eslint-fix": "./node_modules/.bin/eslint --fix --ext .js,.jsx ./src",
+    "stylelint": "./node_modules/.bin/stylelint ./src/**/*.less",
+    "stylelint-fix": "./node_modules/.bin/stylelint --fix ./src/**/*.less",
+    "lint": "npm run eslint && npm run stylelint",
+    "lint-fix": "npm run eslint-fix && npm run stylelint-fix"
   },
+  "pre-commit": [
+    "lint-fix"
+  ],
   "author": "Tian Hao",
   "license": "ISC",
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
+    "babel-eslint": "^8.2.3",
     "babel-loader": "^7.0.0",
     "babel-plugin-import": "^1.7.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
@@ -29,21 +39,26 @@
     "clean-webpack-plugin": "^0.1.16",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.11",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.9.1",
     "file-loader": "^0.11.1",
     "html-webpack-plugin": "^2.28.0",
     "icons-loader": "^0.0.6",
-    "joystick": "^0.1.2",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
-    "react": "^16.4.0",
+    "pre-commit": "^1.2.2",
     "react-ace": "^6.1.1",
-    "react-dom": "^16.4.0",
     "react-redux": "^5.0.7",
-    "react-svg-joystick": "^1.0.0",
     "redux": "^3.7.2",
     "source-map-support": "^0.4.15",
     "style-inject": "^0.1.2",
     "style-loader": "^0.18.2",
+    "stylelint": "^9.2.1",
+    "stylelint-config-recommended": "^2.1.0",
+    "stylelint-config-standard": "^18.2.0",
     "svg-url-loader": "^2.1.1",
     "url-loader": "^0.5.8",
     "webpack": "^2.6.1",
@@ -51,6 +66,10 @@
     "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
-    "antd": "^3.5.0"
+    "antd": "^3.5.0",
+    "prop-types": "^15.6.1",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-svg-joystick": "^1.0.0"
   }
 }
