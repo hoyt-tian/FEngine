@@ -1,7 +1,7 @@
 {
-  "extends": "stylelint-config-standard",
+  "extends": "stylelint-config-recommended",
   "rules": {
     "font-family-no-missing-generic-family-keyword": null,
-    "unit-whitelist": ["rem", "%", "vw", "vh"]
+    "unit-whitelist": ["rem", "px", "deg", "em", "%", "vw", "vh"]
   }
 }
