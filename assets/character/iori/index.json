@@ -1271,9 +1271,10 @@
       "cancelable": false
     }
   },
-  "jump": 80,
+  "jump": 180,
   "blink": 0,
-  "avatar": "avatar.gif",
+  "portrait": "./assets/character/iori/avatar.gif",
+  "avatar": "./assets/character/iori/avatar.png",
   "speed": 2,
   "attack": 100,
   "defense": 100,

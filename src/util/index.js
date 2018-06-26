@@ -29,4 +29,23 @@ const p2r = px => (px / 100).toFixed(2);
 
 const p2rem = px => `${p2r(px)}rem`;
 
-export { EventListener, clone, p2r, p2rem };
+const HD = (global) => {
+  const { document, window } = global;
+  if (window && document) {
+    const event = 'orientationchange' in window ? 'Orientationchange' : 'Resize';
+    const calc = () => {
+      const { documentElement } = document;
+      if (documentElement && documentElement.clientWidth) {
+        if (documentElement.clientWidth >= 640) {
+          documentElement.style.fontSize = '100px';
+        } else {
+          documentElement.style.fontSize = `${100 * (documentElement.clientWidth / 640)}px`;
+        }
+      }
+    };
+    EventListener.listen(window, event, calc);
+    EventListener.listen(document, 'DOMContentLoaded', calc);
+  }
+};
+
+export { EventListener, clone, p2r, p2rem, HD };

@@ -11,5 +11,6 @@
       "audioUrl": "./assets/stage/street.mid",
       "horizontalOffset": 0
     }
-  ]
+  ],
+  "character": "./assets/character/index.json"
 }
