@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Joystick from 'react-svg-joystick';
 import PropTypes from 'prop-types';
 import { EventListener } from '../../util';
-import Controller, { keyCodeConversion } from '../../core/controller';
+import Controller from '../../core/controller';
 import Block, { BlockType } from '../../core/block';
 import Player from '../../core/player';
 import './index.less';
@@ -11,6 +11,31 @@ import HP from '../hp/index.jsx';
 import SVGButton from '../svgbutton';
 import Stage from '../../core/stage';
 import Character from '../../core/character';
+
+export const P1Keys = {
+  0x57: 'w',
+  0x53: 's',
+  0x41: 'a',
+  0x44: 'd',
+  0x00: 'z',
+  0x4A: 'A',
+  0x4B: 'B',
+  0x4C: 'C',
+  0xBA: 'D',
+};
+
+export const P2Keys = {
+  0x26: 'w',
+  0x28: 's',
+  0x25: 'a',
+  0x27: 'd',
+  0x00: 'z',
+  0x37: 'A',
+  0x38: 'B',
+  0x39: 'C',
+  0x30: 'D',
+};
+
 
 class Battle extends Component {
   static pretty(keys) {
@@ -104,20 +129,13 @@ class Battle extends Component {
     setTransform = () => {
     }
 
-    attachCanvas = (el) => {
-      if (el) {
-        this.canvas = el;
-        this.ctx = el.getContext('2d');
+    getPlayerInput = (keyEvent) => {
+      if (keyEvent.keyCode in P1Keys) {
+        return { player: this.p1, key: P1Keys[keyEvent.keyCode] };
+      } else if (keyEvent.keyCode in P2Keys) {
+        return { player: this.p2, key: P2Keys[keyEvent.keyCode] };
       }
-    }
-
-    place(character) {
-      character.y = this.viewbox.availiableHeight;
-      this.addToStage(character);
-    }
-
-    addToStage = (item) => {
-      if (this.items.indexOf(item) < 0) this.items.push(item);
+      return {};
     }
 
     clearBg = () => {
@@ -220,21 +238,41 @@ class Battle extends Component {
       }
     }
 
+    addToStage = (item) => {
+      if (this.items.indexOf(item) < 0) this.items.push(item);
+    }
+
+    place(character) {
+      character.y = this.viewbox.availiableHeight;
+      this.addToStage(character);
+    }
+
+    attachCanvas = (el) => {
+      if (el) {
+        this.canvas = el;
+        this.ctx = el.getContext('2d');
+      }
+    }
+
 
     keyDown = (event) => {
-      let vkey = keyCodeConversion(event.keyCode);
-      vkey = this.p1.controller.fixVkey(vkey);
-      if (vkey) {
-        this.p1.controller.hold(vkey);
-        this.p1.controller.enqueue(vkey);
+      const { key, player } = this.getPlayerInput(event);
+      if (key && player) {
+        const vkey = player.controller.fixVkey(key);
+        if (vkey) {
+          player.controller.hold(vkey);
+          player.controller.enqueue(vkey);
+        }
       }
     }
 
     keyUp = (event) => {
-      this.p1.controller.enqueue(keyCodeConversion(0x00));
-      let vkey = keyCodeConversion(event.keyCode);
-      vkey = this.p1.controller.fixVkey(vkey);
-      this.p1.controller.release(vkey);
+      const { key, player } = this.getPlayerInput(event);
+      if (key && player) {
+        player.controller.enqueue('z');
+        const vkey = player.controller.fixVkey(key);
+        player.controller.release(vkey);
+      }
     }
 
     joyStickDown = (vk) => {
@@ -359,6 +397,7 @@ class Battle extends Component {
             </section>
             <section className="icons">
               <SVGButton src="./assets/music.svg" onChange={this.toggleMusic} toggled={false} />
+              <SVGButton src="./assets/joystick.svg" onChange={() => {}} toggled={false} />
             </section>
           </section>
           {this.props.useJoystick && <section className="ja"><Joystick onKeyPress={this.joyStickDown} onKeyRelease={this.joyStickUp} /></section>}

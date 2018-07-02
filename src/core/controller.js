@@ -1,18 +1,4 @@
 
-export const VKeys = {
-  0x57: 'w',
-  0x53: 's',
-  0x41: 'a',
-  0x44: 'd',
-  0x00: 'z',
-  0x4A: 'A',
-  0x4B: 'B',
-  0x4C: 'C',
-  0xBA: 'D',
-};
-
-export const keyCodeConversion = keyCode => VKeys[keyCode];
-
 const AliveCounter = 15;
 
 class Controller {

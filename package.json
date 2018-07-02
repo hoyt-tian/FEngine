@@ -5,6 +5,7 @@
   "main": "index.js",
   "entry": {
     "editor": "./src/entry/editor/index.js",
+    "practice": "./src/entry/practice/index.js",
     "index": "./src/entry/index/index.js"
   },
   "scripts": {
@@ -70,6 +71,7 @@
     "prop-types": "^15.6.1",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
+    "react-loading-components": "^1.1.12",
     "react-svg-joystick": "^1.0.0"
   }
 }

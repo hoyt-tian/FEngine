@@ -45,6 +45,29 @@ class Action {
     return this.frames[this.current];
   }
 
+  /**
+   * 当前已经绘制的次数
+   */
+  get currentRedraw() {
+    let total = 0;
+    for (let i = 0; i < this.current; i += 1) {
+      total += this.frames[i].redrawCount;
+    }
+    total += this.currentFrame.counter;
+    return total;
+  }
+
+  /**
+   * 总绘制次数
+   */
+  get totalRedraw() {
+    let total = 0;
+    this.frames.forEach((f) => {
+      total += f.redrawCount;
+    });
+    return total;
+  }
+
   reset() {
     this.current = 0;
   }

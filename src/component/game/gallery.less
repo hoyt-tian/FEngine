@@ -1,0 +1,34 @@
+.gallery {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('https://gss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/eaf81a4c510fd9f9e7297815232dd42a2834a48b.jpg');
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: .32rem .32rem;
+
+  .gallery-item {
+
+    width: .64rem;
+    height: .64rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+
+    .avatar {
+      width: .48rem;
+      height: .48rem;
+      display: block;
+    }
+
+    &:hover {
+      border: .01rem solid #000;
+    }
+  }
+}
+
+
+

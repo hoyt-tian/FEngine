@@ -1,6 +1,7 @@
 import Action from './action';
 import Sprite from './sprite';
 import Block, { BlockType } from './block';
+import Physics from './physics';
 
 export const Status = {
   stand: Symbol('站立'),
@@ -129,8 +130,8 @@ class Character {
   }
 
 
-  static fetchAll() {
-    return fetch('./assets/character/index.json')
+  static fetchAll(url = './assets/character/index.json') {
+    return fetch(url)
       .then(response => response.json())
       .then((data) => {
         const ps = [];
@@ -231,10 +232,20 @@ class Character {
         break;
       case 'jump':
         {
-          const offy = -(Math.sin(Math.PI * (
-            (this.currentAction.current +
-                (this.currentFrame.counter / 10)) / this.currentAction.total
-          )) * this.jump) / 5;
+          const { totalRedraw, currentRedraw: current } = this.currentAction;
+          const { offset: offy } = Physics.jump({
+            height: this.jump,
+            totalRedraw,
+            current,
+          });
+          /*
+          const offy = -(
+            Math.sin(Math.PI * 0.5 * (
+              (this.currentAction.current / this.currentAction.total)
+              + (this.currentFrame.counter / this.currentFrame.redrawCount / 10)
+            ))
+            * this.jump / this.currentFrame.redrawCount);
+            */
           if (controller) {
             if (controller.keys.d) {
               this.move(this.speed, offy);
@@ -287,8 +298,21 @@ class Character {
                     && this.currentAction.current >= this.currentAction.loop.start
                     && this.currentAction.current <= this.currentAction.loop.end
         ) {
-          if (this.y < battle.height) {
-            const offy = this.jump / 10;
+          if (this.y < battle.viewbox.availiableHeight) {
+            if (!this.freeFall) {
+              this.freeFall = {
+                _height: battle.viewbox.availiableHeight - this.y,
+                v: 0,
+              };
+            }
+
+            const { a, offset: offy, v } = Physics.freeFall({
+              v: this.freeFall.v,
+            });
+
+            this.freeFall.v = v;
+            this.freeFall.a = a;
+
             if (controller) {
               if (controller.keys.d) {
                 this.move(this.speed, offy);
@@ -301,7 +325,8 @@ class Character {
               this.move(0, offy);
             }
           } else {
-            this.y = battle.height;
+            this.freeFall = null;
+            this.y = battle.viewbox.availiableHeight;
             this.currentAction.current = this.currentAction.loop.end + 1;
           }
         }
@@ -316,14 +341,41 @@ class Character {
                     && this.currentAction.current <= this.currentAction.loop.end
         ) {
           const speed = controller.keys.d ? this.speed : (controller.keys.a ? -this.speed : 0);
+
+          if (!this.freeFall) {
+            this.freeFall = {
+              _height: battle.viewbox.availiableHeight - this.y,
+              v: 0,
+            };
+          }
+
           if (this.y < battle.height) {
-            this.move(speed, this.jump / 5);
+            const { a, offset: offy, v } = Physics.freeFall({
+              v: this.freeFall.v,
+            });
+
+            this.freeFall.v = v;
+            this.freeFall.a = a;
+            this.move(speed, offy);
           } else {
-            this.y = battle.height;
+            this.freeFall = null;
+            this.y = battle.viewbox.availiableHeight;
             this.setStatus('stand', true);
           }
         } else {
-          this.move(0, this.jump / 20);
+          if (!this.freeFall) {
+            this.freeFall = {
+              _height: battle.viewbox.availiableHeight - this.y,
+              v: 0,
+            };
+          }
+          const { a, offset: offy, v } = Physics.freeFall({
+            v: this.freeFall.v,
+          });
+
+          this.freeFall.v = v;
+          this.freeFall.a = a;
+          this.move(0, offy);
         }
         break;
       default:
