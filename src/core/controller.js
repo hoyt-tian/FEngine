@@ -100,6 +100,25 @@ class Controller {
         case 'squat':
           if (this.keys.s === true) {
             this.character.setStatus(this.character.status);
+            motion = this.getMotion();
+            switch (motion) {
+              case 'lp':
+                this.character.setStatus('slp', true);
+                // console.log('light punch when jump');
+                break;
+              case 'lk':
+                // console.log('light kick when jump');
+                break;
+              case 'hp':
+                // console.log('heavy punch when jump');
+                break;
+              case 'hk':
+                // console.log('heavy kick when jump');
+                this.character.setStatus('shk', true);
+                break;
+              default:
+                break;
+            }
           } else {
             this.character.setStatus('stand');
           }

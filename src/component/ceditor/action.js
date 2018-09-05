@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Card, Icon, Switch, Button, Tabs, Badge } from 'antd';
 import Character from '../../core/character';
 import Battle from '../battle/index.jsx';
+import Stage from '../../core/stage';
 import FrameEditor from './frame';
 import './action.less';
 
@@ -9,6 +10,11 @@ export default class ActionEditor extends Component {
     state = {
       selected: 0,
       update: 0,
+      stage: new Stage({
+        name: 'blank',
+        frames: [],
+        horizontalOffset: 0,
+      })
     }
 
     setBattle = (ref) => {
@@ -74,7 +80,7 @@ export default class ActionEditor extends Component {
           </Tabs.TabPane>
           <Tabs.TabPane tab="预览" key="preview">
             <section className="canvas">
-              <Battle character={this.props.character} width={400} height={300} ref={this.setBattle} />
+              <Battle p1={this.props.character} width={400} height={300} ref={this.setBattle} stage={this.state.stage} />
             </section>
           </Tabs.TabPane>
         </Tabs>

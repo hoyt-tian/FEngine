@@ -29,6 +29,7 @@ npm i && npm run dev
 
 ## 游戏操作 / Game Operations
 使用键盘操作时，上下左右是wsad，ABCD的按键分别是jkl;
+增加2P控制
 
 When using keyboard, 'wsad' controls up/down/lef/right/, and 'jkl;' are regarded as 'ABCD'
 

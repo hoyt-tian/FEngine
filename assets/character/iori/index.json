@@ -566,7 +566,7 @@
     },
     "fall": {
       "base": "./assets/character/iori/fall",
-      "name": "jump",
+      "name": "fall",
       "start": 0,
       "total": 4,
       "suffix": "png",
@@ -1064,6 +1064,160 @@
             "height": 37,
             "hit": "const {att} = data; att.source.setStatus('fall', true); att.source.currentAction.current = att.source.currentAction.loop.start "
           }],
+          "defBlocks": []
+        }
+      ],
+      "duration": 400,
+      "cancelable": false
+    },
+    "slp": {
+      "base": "./assets/character/iori/slp",
+      "name": "squat light punch",
+      "start": 0,
+      "total": 4,
+      "suffix": "png",
+      "loop": false,
+      "frames": [
+        {
+          "imgUrl": "./assets/character/iori/slp/1.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/slp/0.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [{
+            "x": 57,
+            "y": -37,
+            "width": 41,
+            "height": 24
+          }],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/slp/1.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/slp/2.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        }
+      ],
+      "duration": 200,
+      "cancelable": false
+    },
+    "shk": {
+      "base": "./assets/character/iori/shk",
+      "name": "squat light punch",
+      "start": 0,
+      "total": 4,
+      "suffix": "png",
+      "loop": false,
+      "frames": [
+        {
+          "imgUrl": "./assets/character/iori/shk/0.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/shk/1.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/shk/2.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [{
+            "x": 60,
+            "y": -33,
+            "width": 71,
+            "height": 30
+          }],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/shk/3.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/shk/4.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/shk/5.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/shk/6.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/shk/7.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/shk/8.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/shk/9.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
+          "defBlocks": []
+        },
+        {
+          "imgUrl": "./assets/character/iori/shk/10.png",
+          "audioUrl": null,
+          "redrawCount": 4,
+          "counter": 0,
+          "attBlocks": [],
           "defBlocks": []
         }
       ],

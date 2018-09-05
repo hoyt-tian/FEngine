@@ -5,7 +5,6 @@
   "main": "index.js",
   "entry": {
     "editor": "./src/entry/editor/index.js",
-    "practice": "./src/entry/practice/index.js",
     "index": "./src/entry/index/index.js"
   },
   "scripts": {
