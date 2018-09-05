@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import Character from '../../core/character';
-import ActionEditor from './action';
 import { Menu } from 'antd';
 import { connect } from 'react-redux';
+import Character from '../../core/character';
+import ActionEditor from './action';
 import './index.less';
 
 class CEditor extends Component {
     state = {
       editType: 1, // 1:基本属性, 2: 基本动作， 3: 特技， 4: 其他
       currentAction: null, // 当前
-      key: null,
+      key: null
     }
 
     basicActions() {
@@ -30,6 +30,9 @@ class CEditor extends Component {
         { name: '坠落', key: 'drop' },
         { name: '起身', key: 'getup' },
         { name: '轻拳（空中）', key: 'jlp' },
+        { name: '轻拳（下蹲）', key: 'slp' },
+        { name: '重腿（下蹲）', key: 'shk' }
+
 
       ];
       return actions.map(i => <Item key={i.key}>{i.name}</Item>);

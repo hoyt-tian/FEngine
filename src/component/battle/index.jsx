@@ -57,6 +57,7 @@ class Battle extends Component {
     showP1HP: PropTypes.bool,
     showP2HP: PropTypes.bool,
     rotate: PropTypes.bool,
+    showBlock: PropTypes.bool,
   }
 
   static defaultProps = {
@@ -68,13 +69,14 @@ class Battle extends Component {
     showP1HP: true,
     showP2HP: true,
     rotate: false,
+    showBlock: false,
   }
 
   constructor(props, context) {
     super(props, context);
 
     this.state = {
-      showBlock: false,
+      showBlock: !!props.showBlock,
       p1hp: 0,
       p1hpMax: 0,
       p2hp: 0,
